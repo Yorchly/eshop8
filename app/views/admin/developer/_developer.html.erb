@@ -1,0 +1,8 @@
+<tr>
+  <td><%= link_to developer.name, :action => 'show', :id => developer %></td>
+  <td><%= link_to 'Edit', :action => 'edit', :id => developer %></td>
+  <td>
+    <%= button_to 'Delete', { :action => 'destroy', :id => developer },
+        data: { confirm: "Estas seguro de que quiere eliminar el desarrollador #{developer.name}?" } %>
+  </td>
+</tr>
