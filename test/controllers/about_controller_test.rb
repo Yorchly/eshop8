@@ -1,11 +1,7 @@
-#require 'test_helper'
-require File.dirname(__FILE__) + '/../test_helper'
+require 'test_helper'
 
 class AboutControllerTest < ActionController::TestCase
-  #test "should get index" do
-  #  get :index
-  #  assert_response :success
-  test "index" do
+  test "should get index" do
     get :index
     assert_response :success
     assert_template 'about/index'

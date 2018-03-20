@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @page_title || 'Eshop8' %></title>
+  <title><%= @page_title || 'Miniemporium' %></title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div id="header">
-    <h1 id="logo">About Eshop8&trade;</h1>
+    <h1 id="logo">Miniemporium&trade;</h1>
     <h2 id="slogan">Books on Rails</h2>
   </div>
+
   <div id="menu">
     <ul>
-      <li><a href="/admin/developer">Developers</a>&nbsp;|&nbsp;</li>
+      <li><a href="/admin/developer">Desarrolladores</a>&nbsp;|&nbsp;</li>
       <li><a href="/admin/publisher">Publishers</a>&nbsp;|&nbsp;</li>
       <li><a href="/admin/book">Books</a>&nbsp;|&nbsp;</li>
       <li><a href="/admin/order">Orders</a>&nbsp;|&nbsp;</li>
@@ -39,4 +40,3 @@
   </div>
 </body>
 </html>
-
