@@ -3,12 +3,12 @@ require 'test_helper'
 class Admin::DeveloperControllerTest < ActionController::TestCase
   fixtures :developers
 
-  test "should get new" do
+  test "new" do
     get :new
     assert_response :success
   end
 
-  test "should get create" do
+  test "create" do
     num_developers = Developer.count
     post :create, :developer => { :name => 'The Monopoly Publishing Company' }
     assert_response :redirect
@@ -16,7 +16,7 @@ class Admin::DeveloperControllerTest < ActionController::TestCase
     assert_equal num_developers + 1, Developer.count
   end
 
-  test "should get edit" do
+  test "edit" do
     get :edit, :id => 1
     assert_select 'input' do
       assert_select '[type=?]', 'text'
@@ -25,14 +25,14 @@ class Admin::DeveloperControllerTest < ActionController::TestCase
     end
   end
 
-  test "should get update" do
+  test "update" do
     post :update, :id => 1, :developer => { :name => 'Apress.com' }
     assert_response :redirect
     assert_redirected_to :action => 'show', :id => 1
     assert_equal 'Apress.com', Developer.find(1).name
   end
 
-  test "should get destroy" do
+  test "destroy" do
     assert_difference(Developer, :count, -1) do
       post :destroy, :id => 1
       assert_equal flash[:notice], 'Succesfully deleted developer Apress.'
@@ -44,7 +44,7 @@ class Admin::DeveloperControllerTest < ActionController::TestCase
     end
   end
 
-  test "should get show" do
+  test "show" do
     get :show, :id => 1
     assert_response :success
     assert_template 'admin/developer/show'
@@ -55,7 +55,7 @@ class Admin::DeveloperControllerTest < ActionController::TestCase
     end
   end
 
-  test "should get index" do
+  test "index" do
     get :index
     assert_response :success
     assert_select 'table' do
