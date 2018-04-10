@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   
-  get 'about/index'
 
   root :to => 'about#index'
 
   get 'about' => 'about#index'
   get 'admin/developer' => 'admin/developer#index'
+  get 'admin/supplier' => 'admin/supplier#index'
 
   get 'admin/developer/new'
   post 'admin/developer/create'
@@ -16,6 +16,14 @@ Rails.application.routes.draw do
   get 'admin/developer/show/:id' => 'admin/developer#show'
   get 'admin/developer/index'
 
+  get 'admin/supplier/new'
+  post 'admin/supplier/create'
+  get 'admin/supplier/edit'
+  post 'admin/supplier/update'
+  post 'admin/supplier/destroy'
+  get 'admin/supplier/show/:id' => 'admin/supplier#show'
+  get 'admin/supplier/index'
+  get 'admin/about/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
