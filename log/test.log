@@ -8,3 +8,1091 @@ Processing by AboutController#index as HTML
   Rendered about/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 337ms (Views: 336.4ms | ActiveRecord: 0.0ms)
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:39:03', '2018-03-29 11:39:03', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:39:25', '2018-03-29 11:39:25', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:40:28', '2018-03-29 11:40:28', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:42:01', '2018-03-29 11:42:01', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:43:09', '2018-03-29 11:43:09', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:43:17', '2018-03-29 11:43:17', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:44:01', '2018-03-29 11:44:01', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:44:13', '2018-03-29 11:44:13', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:53:01', '2018-03-29 11:53:01', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:55:33', '2018-03-29 11:55:33', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:57:43', '2018-03-29 11:57:43', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:57:43', '2018-03-29 11:57:43', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:57:43', '2018-03-29 11:57:43', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:57:43', '2018-03-29 11:57:43', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:57:43', '2018-03-29 11:57:43', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:57:43', '2018-03-29 11:57:43', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:57:43', '2018-03-29 11:57:43', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 11:57:43', '2018-03-29 11:57:43', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:02:30', '2018-03-29 12:02:30', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:02:30', '2018-03-29 12:02:30', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:02:30', '2018-03-29 12:02:30', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:02:30', '2018-03-29 12:02:30', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:02:30', '2018-03-29 12:02:30', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:02:30', '2018-03-29 12:02:30', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:02:30', '2018-03-29 12:02:30', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:02:30', '2018-03-29 12:02:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:03:59', '2018-03-29 12:03:59', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:08:25', '2018-03-29 12:08:25', 980190962)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:08:25', '2018-03-29 12:08:25', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:08:25', '2018-03-29 12:08:25', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:08:25', '2018-03-29 12:08:25', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:08:25', '2018-03-29 12:08:25', 980190962)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:08:25', '2018-03-29 12:08:25', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:08:25', '2018-03-29 12:08:25', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:08:25', '2018-03-29 12:08:25', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:10:00', '2018-03-29 12:10:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:10:00', '2018-03-29 12:10:00', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:10:00', '2018-03-29 12:10:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:10:00', '2018-03-29 12:10:00', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:10:00', '2018-03-29 12:10:00', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:10:00', '2018-03-29 12:10:00', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:10:00', '2018-03-29 12:10:00', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:10:00', '2018-03-29 12:10:00', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:31', '2018-03-29 12:12:31', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:31', '2018-03-29 12:12:31', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:31', '2018-03-29 12:12:31', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:31', '2018-03-29 12:12:31', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:31', '2018-03-29 12:12:31', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:31', '2018-03-29 12:12:31', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:31', '2018-03-29 12:12:31', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:31', '2018-03-29 12:12:31', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:51', '2018-03-29 12:12:51', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:51', '2018-03-29 12:12:51', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:51', '2018-03-29 12:12:51', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:51', '2018-03-29 12:12:51', 980190962)[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:51', '2018-03-29 12:12:51', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:51', '2018-03-29 12:12:51', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:51', '2018-03-29 12:12:51', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:12:51', '2018-03-29 12:12:51', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:05', '2018-03-29 12:13:05', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:46', '2018-03-29 12:13:46', 298486374)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:50', '2018-03-29 12:13:50', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:50', '2018-03-29 12:13:50', 298486374)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:50', '2018-03-29 12:13:50', 298486374)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:50', '2018-03-29 12:13:50', 298486374)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:50', '2018-03-29 12:13:50', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:50', '2018-03-29 12:13:50', 298486374)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:50', '2018-03-29 12:13:50', 298486374)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `developers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`created_at`, `updated_at`, `id`) VALUES ('2018-03-29 12:13:50', '2018-03-29 12:13:50', 298486374)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-03-29 12:16:43', '2018-03-29 12:16:43')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-03-29 12:16:43', '2018-03-29 12:16:43')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Adobe', '2018-03-29 12:16:43', '2018-03-29 12:16:43')
+  [1m[36m (106.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+AboutControllerTest: test_should_get_index
+------------------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 307ms (Views: 306.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_edit
+----------------------------------------------------
+Processing by Admin::DeveloperController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  Rendered admin/developer/_form.html.erb (7.5ms)
+  Rendered admin/developer/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 25ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_index
+-----------------------------------------------------
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (2.4ms)
+  Rendered admin/developer/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  `developers`.* FROM `developers`  ORDER BY `developers`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_update
+------------------------------------------------------
+Processing by Admin::DeveloperController#update as HTML
+  Parameters: {"id"=>"1", "developer"=>{"name"=>"Apress.com"}}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mDeveloper Exists (0.4ms)[0m  SELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress.com' AND `developers`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `developers` SET `name` = 'Apress.com', `updated_at` = '2018-03-29 12:16:44' WHERE `developers`.`id` = 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/developer/show/1
+Completed 302 Found in 12ms (ActiveRecord: 1.7ms)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (52.8ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_destroy
+-------------------------------------------------------
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `developers`
+Processing by Admin::DeveloperController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM `developers` WHERE `developers`.`id` = 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (1.6ms)
+  Rendered admin/developer/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36m (57.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_create
+------------------------------------------------------
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"developer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mDeveloper Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `developers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-03-29 12:16:44', '2018-03-29 12:16:44')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36m (51.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+---------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_new
+---------------------------------------------------
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (0.5ms)
+  Rendered admin/developer/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_show
+----------------------------------------------------
+Processing by Admin::DeveloperController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  Rendered admin/developer/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+  [1m[35mDeveloper Exists (0.8ms)[0m  SELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress' AND `developers`.`id` != 1) LIMIT 1
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-03-29 12:16:56', '2018-03-29 12:16:56')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-03-29 12:16:56', '2018-03-29 12:16:56')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Adobe', '2018-03-29 12:16:56', '2018-03-29 12:16:56')
+  [1m[36m (49.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------
+AboutControllerTest: test_should_get_index
+------------------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 177ms (Views: 176.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Adobe', '2018-03-29 12:17:13', '2018-03-29 12:17:13')
+  [1m[36m (49.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+------------------------------------------
+AboutControllerTest: test_should_get_index
+------------------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 177ms (Views: 176.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Adobe', '2018-03-29 12:17:18', '2018-03-29 12:17:18')
+  [1m[36m (44.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+------------------------------------------
+AboutControllerTest: test_should_get_index
+------------------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 199ms (Views: 199.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_edit
+----------------------------------------------------
+Processing by Admin::DeveloperController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_show
+----------------------------------------------------
+Processing by Admin::DeveloperController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+Completed 404 Not Found in 1ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_create
+------------------------------------------------------
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `developers`
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"developer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mDeveloper Exists (0.4ms)[0m  SELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `developers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-03-29 12:17:18', '2018-03-29 12:17:18')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 19ms (ActiveRecord: 1.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+  [1m[35m (53.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+-------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_destroy
+-------------------------------------------------------
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `developers`
+Processing by Admin::DeveloperController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_update
+------------------------------------------------------
+Processing by Admin::DeveloperController#update as HTML
+  Parameters: {"id"=>"1", "developer"=>{"name"=>"Apress.com"}}
+  [1m[35mDeveloper Load (0.7ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_index
+-----------------------------------------------------
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (1.4ms)
+  Rendered admin/developer/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers`  ORDER BY `developers`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_new
+---------------------------------------------------
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (5.8ms)
+  Rendered admin/developer/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Adobe', '2018-03-29 12:17:57', '2018-03-29 12:17:57')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apple', '2018-03-29 12:17:57', '2018-03-29 12:17:57')[0m
+  [1m[35m (107.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_create
+------------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"developer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mDeveloper Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `developers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-03-29 12:17:57', '2018-03-29 12:17:57')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 15ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36m (58.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_destroy
+-------------------------------------------------------
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+Processing by Admin::DeveloperController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM `developers` WHERE `developers`.`id` = 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+  [1m[35m (51.8ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_show
+----------------------------------------------------
+Processing by Admin::DeveloperController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.8ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  Rendered admin/developer/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 206ms (Views: 203.9ms | ActiveRecord: 0.8ms)
+  [1m[36mDeveloper Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apple' AND `developers`.`id` != 1) LIMIT 1[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_index
+-----------------------------------------------------
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (1.8ms)
+  Rendered admin/developer/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers`  ORDER BY `developers`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_update
+------------------------------------------------------
+Processing by Admin::DeveloperController#update as HTML
+  Parameters: {"id"=>"1", "developer"=>{"name"=>"Apress.com"}}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mDeveloper Exists (0.4ms)[0m  SELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress.com' AND `developers`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `developers` SET `name` = 'Apress.com', `updated_at` = '2018-03-29 12:17:58' WHERE `developers`.`id` = 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/developer/show/1
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (51.2ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_edit
+----------------------------------------------------
+Processing by Admin::DeveloperController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.8ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  Rendered admin/developer/_form.html.erb (9.8ms)
+  Rendered admin/developer/edit.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_new
+---------------------------------------------------
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (0.2ms)
+  Rendered admin/developer/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+AboutControllerTest: test_should_get_index
+------------------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-03-29 12:18:24', '2018-03-29 12:18:24')
+  [1m[36m (83.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+AboutControllerTest: test_should_get_index
+------------------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 176ms (Views: 175.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_create
+------------------------------------------------------
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `developers`
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"developer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mDeveloper Exists (0.4ms)[0m  SELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `developers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-03-29 12:18:24', '2018-03-29 12:18:24')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 17ms (ActiveRecord: 1.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+  [1m[35m (50.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+---------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_new
+---------------------------------------------------
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (5.8ms)
+  Rendered admin/developer/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_edit
+----------------------------------------------------
+Processing by Admin::DeveloperController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  Rendered admin/developer/_form.html.erb (0.2ms)
+  Rendered admin/developer/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_show
+----------------------------------------------------
+Processing by Admin::DeveloperController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  Rendered admin/developer/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+  [1m[35mDeveloper Exists (0.6ms)[0m  SELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress' AND `developers`.`id` != 1) LIMIT 1
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_update
+------------------------------------------------------
+Processing by Admin::DeveloperController#update as HTML
+  Parameters: {"id"=>"1", "developer"=>{"name"=>"Apress.com"}}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mDeveloper Exists (0.4ms)[0m  SELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress.com' AND `developers`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `developers` SET `name` = 'Apress.com', `updated_at` = '2018-03-29 12:18:24' WHERE `developers`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/developer/show/1
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (55.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+-----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_index
+-----------------------------------------------------
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.8ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (3.1ms)
+  Rendered admin/developer/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  `developers`.* FROM `developers`  ORDER BY `developers`.`id` ASC LIMIT 1000
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_destroy
+-------------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+Processing by Admin::DeveloperController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM `developers` WHERE `developers`.`id` = 1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (0.0ms)
+  Rendered admin/developer/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+  [1m[35m (51.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-03-29 12:18:45', '2018-03-29 12:18:45')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-03-29 12:18:45', '2018-03-29 12:18:45')[0m
+  [1m[35m (101.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+AboutControllerTest: test_should_get_index
+------------------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 178ms (Views: 177.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_index
+-----------------------------------------------------
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (2.0ms)
+  Rendered admin/developer/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers`  ORDER BY `developers`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_edit
+----------------------------------------------------
+Processing by Admin::DeveloperController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  Rendered admin/developer/_form.html.erb (7.1ms)
+  Rendered admin/developer/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_create
+------------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"developer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mDeveloper Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `developers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-03-29 12:18:45', '2018-03-29 12:18:45')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 12ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36m (55.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_update
+------------------------------------------------------
+Processing by Admin::DeveloperController#update as HTML
+  Parameters: {"id"=>"1", "developer"=>{"name"=>"Apress.com"}}
+  [1m[36mDeveloper Load (0.6ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mDeveloper Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress.com' AND `developers`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `developers` SET `name` = 'Apress.com', `updated_at` = '2018-03-29 12:18:45' WHERE `developers`.`id` = 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/developer/show/1
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (50.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_new
+---------------------------------------------------
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (0.5ms)
+  Rendered admin/developer/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_destroy
+-------------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+Processing by Admin::DeveloperController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM `developers` WHERE `developers`.`id` = 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (0.8ms)
+  Rendered admin/developer/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+  [1m[35m (53.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+Admin::DeveloperControllerTest: test_should_get_show
+----------------------------------------------------
+Processing by Admin::DeveloperController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (0.7ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  Rendered admin/developer/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.7ms)
+  [1m[36mDeveloper Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress' AND `developers`.`id` != 1) LIMIT 1[0m
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-03-29 12:18:51', '2018-03-29 12:18:51')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-03-29 12:18:51', '2018-03-29 12:18:51')[0m
+  [1m[35m (40.5ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+------------------------------------------
+AboutControllerTest: test_should_get_index
+------------------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 177ms (Views: 177.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m

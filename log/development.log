@@ -1118,3 +1118,117 @@ Processing by Admin::DeveloperController#index as HTML
   Rendered admin/developer/_developer.html.erb (3.5ms)
   Rendered admin/developer/index.html.erb within layouts/application (7.0ms)
 Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-29 13:38:09 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 248ms (Views: 239.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-03-29 13:38:13 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (0.0ms)
+  Rendered admin/developer/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/developer/new" for 127.0.0.1 at 2018-03-29 13:39:11 +0200
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (9.0ms)
+  Rendered admin/developer/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/developer/create" for 127.0.0.1 at 2018-03-29 13:39:15 +0200
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5HNzgAenmBub58pOKciOnkeVOkmIpjBPCw4A4IAs4SrE935bBwobk39p0olN/purvXbDyXa3HbTi92pmIhNu0w==", "developer"=>{"name"=>"Adobe"}, "commit"=>"Create developer"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Exists (0.4ms)[0m  SELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY 'Adobe' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `developers` (`name`, `created_at`, `updated_at`) VALUES ('Adobe', '2018-03-29 11:39:15', '2018-03-29 11:39:15')[0m
+  [1m[35m (41.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/developer
+Completed 302 Found in 63ms (ActiveRecord: 42.2ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-03-29 13:39:15 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (1.8ms)
+  Rendered admin/developer/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-03-29 13:39:18 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (1.5ms)
+  Rendered admin/developer/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-03-29 13:39:19 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (1.6ms)
+  Rendered admin/developer/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/about/index" for 127.0.0.1 at 2018-03-29 13:40:19 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about/index" for 127.0.0.1 at 2018-03-29 13:40:22 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-03-29 13:43:41 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (0.9ms)
+  Rendered admin/developer/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-03-29 13:43:42 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-03-29 13:51:10 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (1.0ms)
+  Rendered admin/developer/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-29 13:56:55 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 242ms (Views: 234.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-03-29 13:56:57 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (2.0ms)
+  Rendered admin/developer/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/developer/show/4" for 127.0.0.1 at 2018-03-29 13:56:59 +0200
+Processing by Admin::DeveloperController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 4 LIMIT 1[0m
+  Rendered admin/developer/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 21.3ms | ActiveRecord: 0.7ms)
