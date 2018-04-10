@@ -1465,3 +1465,237 @@ Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.7ms)
   [1m[35mDeveloper Exists (0.8ms)[0m  SELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress' AND `developers`.`id` != 1) LIMIT 1
   [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
   [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (3.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (1.3ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-10 12:09:41', '2018-04-10 12:09:41')
+  [1m[36mFixture Insert (12.5ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-10 12:09:41', '2018-04-10 12:09:41')[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Joel', 'Spolsky', '2018-04-10 12:09:41', '2018-04-10 12:09:41')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Jeremy', 'Keith', '2018-04-10 12:09:41', '2018-04-10 12:09:41')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (3, 'Jarkko', 'Laine', '2018-04-10 12:09:41', '2018-04-10 12:09:41')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (4, 'Christian', 'Hellsten', '2018-04-10 12:09:41', '2018-04-10 12:09:41')
+  [1m[36mFixture Insert (4.5ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (5, 'Leo', 'Tolstoy', '2018-04-10 12:09:41', '2018-04-10 12:09:41')[0m
+  [1m[35m (4.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------------
+Admin::SupplierControllerTest: test_new
+---------------------------------------
+Processing by Admin::SupplierController#new as HTML
+  Rendered admin/supplier/_form.html.erb (10.0ms)
+  Rendered admin/supplier/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 748ms (Views: 743.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+Admin::SupplierControllerTest: test_test_destroy
+------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `suppliers`[0m
+Processing by Admin::SupplierController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSupplier Load (0.6ms)[0m  SELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM `suppliers` WHERE `suppliers`.`id` = 1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/supplier
+Completed 302 Found in 19ms (ActiveRecord: 1.7ms)
+Processing by Admin::SupplierController#index as HTML
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers`
+  Rendered admin/supplier/_supplier.html.erb (4.4ms)
+  Rendered admin/supplier/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `suppliers`[0m
+  [1m[35m (18.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::SupplierControllerTest: test_edit
+----------------------------------------
+Processing by Admin::SupplierController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSupplier Load (4.0ms)[0m  SELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 1 LIMIT 1
+  Rendered admin/supplier/_form.html.erb (0.4ms)
+  Rendered admin/supplier/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 4.0ms)
+  [1m[36m (5.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+--------------------------------------------------
+Admin::SupplierControllerTest: test_failing_create
+--------------------------------------------------
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `suppliers`[0m
+Processing by Admin::SupplierController#create as HTML
+  Parameters: {"supplier"=>{"first_name"=>"Joel"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (4.6ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered admin/supplier/_form.html.erb (7.5ms)
+  Rendered admin/supplier/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 52ms (Views: 10.4ms | ActiveRecord: 4.9ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `suppliers`
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+Admin::SupplierControllerTest: test_update
+------------------------------------------
+Processing by Admin::SupplierController#update as HTML
+  Parameters: {"id"=>"1", "supplier"=>{"first_name"=>"Joseph", "last_name"=>"Spolsky"}}
+  [1m[36mSupplier Load (7.4ms)[0m  [1mSELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.0ms)[0m  [1mUPDATE `suppliers` SET `first_name` = 'Joseph', `updated_at` = '2018-04-10 12:09:42' WHERE `suppliers`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/supplier/show/1
+Completed 302 Found in 24ms (ActiveRecord: 15.0ms)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (5.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------
+Admin::SupplierControllerTest: test_create
+------------------------------------------
+Processing by Admin::SupplierController#new as HTML
+  Rendered admin/supplier/_form.html.erb (0.5ms)
+  Rendered admin/supplier/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `suppliers`
+Processing by Admin::SupplierController#create as HTML
+  Parameters: {"supplier"=>{"first_name"=>"Joel", "last_name"=>"Spolsky"}}
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (10.6ms)[0m  INSERT INTO `suppliers` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('Joel', 'Spolsky', '2018-04-10 12:09:42', '2018-04-10 12:09:42')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/supplier
+Completed 302 Found in 27ms (Views: 17.0ms | ActiveRecord: 11.5ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `suppliers`
+  [1m[36m (4.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------
+Admin::SupplierControllerTest: test_index
+-----------------------------------------
+Processing by Admin::SupplierController#index as HTML
+  [1m[36mSupplier Load (1.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers`[0m
+  Rendered admin/supplier/_supplier.html.erb (16.7ms)
+  Rendered admin/supplier/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `suppliers`
+  [1m[36mSupplier Load (5.5ms)[0m  [1mSELECT  `suppliers`.* FROM `suppliers`  ORDER BY `suppliers`.`id` ASC LIMIT 1000[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+----------------------------------------
+Admin::SupplierControllerTest: test_show
+----------------------------------------
+Processing by Admin::SupplierController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSupplier Load (6.6ms)[0m  SELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 1 LIMIT 1
+  Rendered admin/supplier/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 3.8ms | ActiveRecord: 6.6ms)
+  [1m[36mSupplier Load (4.7ms)[0m  [1mSELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------
+AboutControllerTest: test_should_get_index
+------------------------------------------
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (6.9ms)[0m  ROLLBACK
+  [1m[36m (1.6ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+Admin::DeveloperControllerTest: test_edit
+-----------------------------------------
+Processing by Admin::DeveloperController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeveloper Load (1.9ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  Rendered admin/developer/_form.html.erb (10.9ms)
+  Rendered admin/developer/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 45ms (Views: 30.6ms | ActiveRecord: 1.9ms)
+  [1m[36m (7.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------
+Admin::DeveloperControllerTest: test_new
+----------------------------------------
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (0.2ms)
+  Rendered admin/developer/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (6.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (2.3ms)[0m  BEGIN
+-------------------------------------------
+Admin::DeveloperControllerTest: test_update
+-------------------------------------------
+Processing by Admin::DeveloperController#update as HTML
+  Parameters: {"id"=>"1", "developer"=>{"name"=>"Apress.com"}}
+  [1m[36mDeveloper Load (4.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (5.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mDeveloper Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress.com' AND `developers`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `developers` SET `name` = 'Apress.com', `updated_at` = '2018-04-10 12:09:42' WHERE `developers`.`id` = 1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/developer/show/1
+Completed 302 Found in 58ms (ActiveRecord: 11.4ms)
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36m (51.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+Admin::DeveloperControllerTest: test_create
+-------------------------------------------
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `developers`[0m
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"developer"=>{"name"=>"The Monopoly Publishing Company"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mDeveloper Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY 'The Monopoly Publishing Company' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO `developers` (`name`, `created_at`, `updated_at`) VALUES ('The Monopoly Publishing Company', '2018-04-10 12:09:43', '2018-04-10 12:09:43')
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36m (3.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+Admin::DeveloperControllerTest: test_index
+------------------------------------------
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (2.5ms)
+  Rendered admin/developer/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers`  ORDER BY `developers`.`id` ASC LIMIT 1000[0m
+  [1m[35m (5.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+Admin::DeveloperControllerTest: test_destroy
+--------------------------------------------
+  [1m[35m (3.2ms)[0m  SELECT COUNT(*) FROM `developers`
+Processing by Admin::DeveloperController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (3.2ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (2.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.7ms)[0m  [1mDELETE FROM `developers` WHERE `developers`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/admin/developer
+Completed 302 Found in 13ms (ActiveRecord: 7.6ms)
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.9ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (1.4ms)
+  Rendered admin/developer/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.9ms)
+  [1m[35m (5.5ms)[0m  SELECT COUNT(*) FROM `developers`
+  [1m[36m (5.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------
+Admin::DeveloperControllerTest: test_show
+-----------------------------------------
+Processing by Admin::DeveloperController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeveloper Load (2.7ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  Rendered admin/developer/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 2.7ms)
+  [1m[35mDeveloper Exists (11.2ms)[0m  SELECT  1 AS one FROM `developers` WHERE (`developers`.`name` = BINARY 'Apress' AND `developers`.`id` != 1) LIMIT 1
+  [1m[36mDeveloper Load (7.7ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (4.0ms)[0m  [1mBEGIN[0m
+----------------------------
+SupplierTest: test_test_name
+----------------------------
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (14.4ms)[0m  [1mINSERT INTO `suppliers` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('John', 'Smith', '2018-04-10 12:09:43', '2018-04-10 12:09:43')[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (8.8ms)[0m  [1mROLLBACK[0m
