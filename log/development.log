@@ -1870,3 +1870,59 @@ Processing by Admin::SupplierController#index as HTML
   Rendered admin/supplier/_supplier.html.erb (1.0ms)
   Rendered admin/supplier/index.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (29.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProgramsAndProgramsSuppliers (20180417101221)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/joaquin/projects/eshop8/db/migrate/20180417101221_create_programs_and_programs_suppliers.rb:11)
+  [1m[35m (357.2ms)[0m  CREATE TABLE `programs` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `type` varchar(255) NOT NULL, `developer_id` int(11) NOT NULL, `developed_at` datetime, `serial_number` varchar(5), `blurb` text, `price` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/joaquin/projects/eshop8/db/migrate/20180417101221_create_programs_and_programs_suppliers.rb:17)
+  [1m[36m (267.6ms)[0m  [1mCREATE TABLE `programs_suppliers` (`id` int(11) auto_increment PRIMARY KEY, `supplier_id` int(11) NOT NULL, `program_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (926.9ms)[0m  ALTER TABLE programs_suppliers ADD CONSTRAINT fk_programs_suppliers_suppliers
+              FOREIGN KEY (supplier_id) REFERENCES suppliers(id) ON DELETE CASCADE
+  [1m[36m (862.1ms)[0m  [1mALTER TABLE programs_suppliers ADD CONSTRAINT fk_programs_suppliers_programs
+              FOREIGN KEY (program_id) REFERENCES programs(id) ON DELETE CASCADE[0m
+  [1m[35m (871.3ms)[0m  ALTER TABLE programs ADD CONSTRAINT fk_programs_developers
+              FOREIGN KEY (developer_id) REFERENCES developers(id) ON DELETE CASCADE
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (22.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180417101221')
+  [1m[36m (47.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.8ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'developers'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `developers`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'programs'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `programs`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'programs_suppliers'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `programs_suppliers`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'suppliers'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `suppliers`
