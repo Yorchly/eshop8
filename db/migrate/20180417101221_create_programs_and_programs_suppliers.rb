@@ -2,7 +2,7 @@ class CreateProgramsAndProgramsSuppliers < ActiveRecord::Migration
   def up
     create_table :programs do |t|
       t.string :name, :limit => 255, :null => false
-      t.string :type, :limit => 255, :null => false
+      t.string :kind, :limit => 255, :null => false
       t.integer :developer_id, :null => false
       t.datetime :developed_at
       t.string :serial_number, :limit => 5, :unique => true

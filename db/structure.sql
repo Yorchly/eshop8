@@ -41,7 +41,7 @@ DROP TABLE IF EXISTS `programs`;
 CREATE TABLE `programs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
-  `type` varchar(255) NOT NULL,
+  `kind` varchar(255) NOT NULL,
   `developer_id` int(11) NOT NULL,
   `developed_at` datetime DEFAULT NULL,
   `serial_number` varchar(5) DEFAULT NULL,

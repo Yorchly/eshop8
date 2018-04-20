@@ -8,7 +8,7 @@ class Admin::ProgramController < ApplicationController
   def create
     @program = Program.new(program_params)
     if @program.save
-      flash[:notice] = "Program #{@program.title} was succesfully created."
+      flash[:notice] = "Program #{@program.name} was succesfully created."
       redirect_to :action => 'index'
     else
       load_data
@@ -26,7 +26,7 @@ class Admin::ProgramController < ApplicationController
   def update
     @program = Program.find(params[:id])
     if @program.update_attributes(program_params)
-      flash[:notice] = "Program #{@program.title} was succesfully updated."
+      flash[:notice] = "Program #{@program.name} was succesfully updated."
       redirect_to :action => 'show', :id => @program
     else
       load_data
@@ -38,13 +38,13 @@ class Admin::ProgramController < ApplicationController
   def destroy
     @program = Program.find(params[:id])
     @program.destroy
-    flash[:notice] = "Succesfully deleted program #{@program.title}."
+    flash[:notice] = "Succesfully deleted program #{@program.name}."
     redirect_to :action => 'index'
   end
 
   def show
     @program = Program.find(params[:id])
-    @page_title = program.title
+    #@page_title = program.name
   end
 
   def index
@@ -61,7 +61,7 @@ class Admin::ProgramController < ApplicationController
     end
 
     def program_params
-      params.require(:program).permit(:name, :type, :developer_id, :developed_at, { :supplier_ids => [] },
+      params.require(:program).permit(:name, :kind, :developer_id, :developed_at, { :supplier_ids => [] },
                                    :serial_number, :blurb, :price, :cover_image)
     end
 end

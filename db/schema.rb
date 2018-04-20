@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180420142034) do
 
   create_table "programs", force: :cascade do |t|
     t.string   "name",                     limit: 255,   null: false
-    t.string   "type",                     limit: 255,   null: false
+    t.string   "kind",                     limit: 255,   null: false
     t.integer  "developer_id",             limit: 4,     null: false
     t.datetime "developed_at"
     t.string   "serial_number",            limit: 5

@@ -1933,3 +1933,538 @@ SupplierTest: test_test_name
   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `suppliers` (`first_name`, `last_name`, `created_at`, `updated_at`) VALUES ('John', 'Smith', '2018-04-17 06:40:22', '2018-04-17 06:40:22')[0m
   [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (111.7ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.7ms)[0m  [1mDROP DATABASE IF EXISTS `eshop8_test`[0m
+  [1m[35m (8.4ms)[0m  CREATE DATABASE `eshop8_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (46.3ms)[0m  [1mCREATE TABLE `developers` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (12.7ms)[0m  CREATE TABLE `programs` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `kind` varchar(255) NOT NULL, `developer_id` int(11) NOT NULL, `developed_at` datetime, `serial_number` varchar(5), `blurb` text, `price` float(24), `created_at` datetime, `updated_at` datetime, `cover_image_file_name` varchar(255), `cover_image_content_type` varchar(255), `cover_image_file_size` int(11), `cover_image_updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (10.7ms)[0m  [1mCREATE  INDEX `fk_programs_developers` USING btree ON `programs` (`developer_id`) [0m
+  [1m[35m (11.9ms)[0m  CREATE TABLE `programs_suppliers` (`id` int(11) auto_increment PRIMARY KEY, `supplier_id` int(11) NOT NULL, `program_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (15.3ms)[0m  [1mCREATE  INDEX `fk_programs_suppliers_programs` USING btree ON `programs_suppliers` (`program_id`) [0m
+  [1m[35m (11.0ms)[0m  CREATE  INDEX `fk_programs_suppliers_suppliers` USING btree ON `programs_suppliers` (`supplier_id`) 
+  [1m[36m (11.7ms)[0m  [1mCREATE TABLE `suppliers` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (46.5ms)[0m  ALTER TABLE `programs` ADD CONSTRAINT `fk_programs_developers`
+FOREIGN KEY (`developer_id`)
+  REFERENCES `developers` (`id`)
+ ON DELETE CASCADE
+  [1m[36m (59.1ms)[0m  [1mALTER TABLE `programs_suppliers` ADD CONSTRAINT `fk_programs_suppliers_programs`
+FOREIGN KEY (`program_id`)
+  REFERENCES `programs` (`id`)
+ ON DELETE CASCADE[0m
+  [1m[35m (32.7ms)[0m  ALTER TABLE `programs_suppliers` ADD CONSTRAINT `fk_programs_suppliers_suppliers`
+FOREIGN KEY (`supplier_id`)
+  REFERENCES `suppliers` (`id`)
+ ON DELETE CASCADE
+  [1m[36m (14.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (24.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20180420142034')
+  [1m[36m (2.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20180410094720')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20180417101221')
+  [1m[36m (1.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20180320095142')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.5ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.6ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.7ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (1.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 17:47:44', '2018-04-20 17:47:44', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (19.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (9.6ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:29', '2018-04-20 18:45:29', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:45:30', '2018-04-20 18:45:30', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (5.9ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (4.4ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `programs`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.4ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-20 18:47:06', '2018-04-20 18:47:06', 980190962)[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m

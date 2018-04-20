@@ -10,7 +10,7 @@ class Program < ActiveRecord::Base
   :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
 
   validates_length_of :name, :in => 1..255
-  validates_length_of :type, :in => 1..255
+  validates_length_of :kind, :in => 1..255
   validates_presence_of :developer
   validates_presence_of :suppliers
   validates_presence_of :developed_at
