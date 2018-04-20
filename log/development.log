@@ -4180,3 +4180,115 @@ Command :: file -b --mime '/tmp/2fc566220f58198055e74c454234436320180420-6965-1a
   Rendered admin/program/_form.html.erb (14.8ms)
   Rendered admin/program/new.html.erb within layouts/application (20.6ms)
 Completed 200 OK in 87ms (Views: 36.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 17:57:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 208ms (Views: 201.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-20 17:57:18 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[35mProgram Load (0.3ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0
+  Rendered admin/program/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 58ms (Views: 45.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/program/new" for 127.0.0.1 at 2018-04-20 17:57:22 +0200
+Processing by Admin::ProgramController#new as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  [1m[35mSupplier Load (0.2ms)[0m  SELECT `suppliers`.* FROM `suppliers`
+  Rendered admin/program/_form.html.erb (76.6ms)
+  Rendered admin/program/new.html.erb within layouts/application (79.9ms)
+Completed 200 OK in 125ms (Views: 109.5ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/admin/program/create?id=" for 127.0.0.1 at 2018-04-20 17:58:08 +0200
+Processing by Admin::ProgramController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZZjpJrYkcVz19G1eEqD2XdzOfo6FGnuLTzZx9kGcsl48kgwomPsRk1sNbEq1ehI3f6ff9SCg+NUOqHxgZRsaHA==", "program"=>{"name"=>"Hola", "developer_id"=>"1", "developed_at(1i)"=>"2018", "developed_at(2i)"=>"4", "developed_at(3i)"=>"20", "developed_at(4i)"=>"15", "developed_at(5i)"=>"57", "serial_number"=>"250", "blurb"=>"Hola que tal", "price"=>"25.10", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007fa1420ebab0 @tempfile=#<Tempfile:/tmp/RackMultipart20180420-7069-135q4s9.jpg>, @original_filename="ChilledCow.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"program[cover_image]\"; filename=\"ChilledCow.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create program", "id"=>""}
+Command :: file -b --mime '/tmp/2fc566220f58198055e74c454234436320180420-7069-sgh7ym.jpg'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/tmp/2fc566220f58198055e74c454234436320180420-7069-1lgqiwv.jpg'
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36mProgram Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `programs` WHERE `programs`.`serial_number` = BINARY '250' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  [1m[35mSupplier Load (0.1ms)[0m  SELECT `suppliers`.* FROM `suppliers`
+  Rendered admin/program/_form.html.erb (9.0ms)
+  Rendered admin/program/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 59ms (Views: 28.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/admin/program/create?id=" for 127.0.0.1 at 2018-04-20 17:58:17 +0200
+Processing by Admin::ProgramController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xPQ9K/zOifdUSUnVvct3UGpUrRh2BRBVrp3gTG8B7Iud/tgl0hHpOPqwSMEaEZM6yT0MY9O/kwvvA+3aS4ZEyQ==", "program"=>{"name"=>"Hola", "developer_id"=>"1", "supplier_ids"=>["1"], "developed_at(1i)"=>"2018", "developed_at(2i)"=>"4", "developed_at(3i)"=>"20", "developed_at(4i)"=>"15", "developed_at(5i)"=>"57", "serial_number"=>"250", "blurb"=>"Hola que tal", "price"=>"25.10"}, "commit"=>"Create program", "id"=>""}
+  [1m[36mSupplier Load (0.4ms)[0m  [1mSELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mProgram Exists (0.2ms)[0m  SELECT  1 AS one FROM `programs` WHERE `programs`.`serial_number` = BINARY '250' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mDeveloper Load (0.2ms)[0m  SELECT `developers`.* FROM `developers`
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers`[0m
+  Rendered admin/program/_form.html.erb (10.8ms)
+  Rendered admin/program/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 48ms (Views: 29.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 18:00:18 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-20 18:00:20 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[35mProgram Load (0.3ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0
+  Rendered admin/program/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 18:02:42 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-20 18:02:44 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[36mProgram Load (0.3ms)[0m  [1mSELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0[0m
+  Rendered admin/program/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/program/new" for 127.0.0.1 at 2018-04-20 18:02:47 +0200
+Processing by Admin::ProgramController#new as HTML
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT `developers`.* FROM `developers`
+  [1m[36mSupplier Load (0.2ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers`[0m
+  Rendered admin/program/_form.html.erb (5.6ms)
+  Rendered admin/program/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/program/create?id=" for 127.0.0.1 at 2018-04-20 18:03:06 +0200
+Processing by Admin::ProgramController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFVe0Mbshb51d328ZvjKij8LImpQvrvtoPD5tkzw47QdX7ve6DPlcduOfKjBIi7gnGKDEfUEOLPhbvQgaHdL9g==", "program"=>{"name"=>"Hola", "type"=>"asdkjasd", "developer_id"=>"1", "supplier_ids"=>["1"], "developed_at(1i)"=>"2018", "developed_at(2i)"=>"4", "developed_at(3i)"=>"20", "developed_at(4i)"=>"16", "developed_at(5i)"=>"02", "serial_number"=>"255", "blurb"=>"Hola", "price"=>"25.70", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007fa141ca2940 @tempfile=#<Tempfile:/tmp/RackMultipart20180420-7069-kms10t.jpg>, @original_filename="ChilledCow.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"program[cover_image]\"; filename=\"ChilledCow.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create program", "id"=>""}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::SubclassNotFound (Invalid single-table inheritance type: asdkjasd is not a subclass of Program):
+  app/controllers/admin/program_controller.rb:9:in `create'
+
+
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/york/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.3ms)
