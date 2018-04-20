@@ -21,7 +21,7 @@
 
 <div class="field">
   <p><label for="program_developer">Developer</label><br/>
-  <%= number_field 'program', 'developer' %></p>
+  <%= collection_select :program, :developer_id, @developers, :id, :name %></p>
 </div>
 
 <div class="field">
