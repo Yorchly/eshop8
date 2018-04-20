@@ -5,9 +5,9 @@ class Program < ActiveRecord::Base
   #has_many :cart_items
   #has_many :carts, :through => :cart_items
 
-  #has_attached_file :cover_image
-  #validates_attachment :cover_image,
-  #:content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
+  has_attached_file :cover_image
+  validates_attachment :cover_image,
+  :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
 
   validates_length_of :name, :in => 1..255
   validates_length_of :type, :in => 1..255
@@ -18,8 +18,8 @@ class Program < ActiveRecord::Base
   validates_length_of :serial_number, :in => 1..5
   validates_uniqueness_of :serial_number
 
-  def suplier_names
-    self.suppliers.map{|suplier| suplier.name}.join(", ")
+  def supplier_names
+    self.suppliers.map{|supplier| supplier.name}.join(", ")
   end
 
   def self.latest(num)

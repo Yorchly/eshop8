@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'about' => 'about#index'
   get 'admin/developer' => 'admin/developer#index'
   get 'admin/supplier' => 'admin/supplier#index'
+  get 'admin/program' => 'admin/program#index'
 
   get 'admin/developer/new'
   post 'admin/developer/create'

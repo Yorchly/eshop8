@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417101221) do
+ActiveRecord::Schema.define(version: 20180420142034) do
 
   create_table "developers", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
@@ -20,15 +20,19 @@ ActiveRecord::Schema.define(version: 20180417101221) do
   end
 
   create_table "programs", force: :cascade do |t|
-    t.string   "name",          limit: 255,   null: false
-    t.string   "type",          limit: 255,   null: false
-    t.integer  "developer_id",  limit: 4,     null: false
+    t.string   "name",                     limit: 255,   null: false
+    t.string   "type",                     limit: 255,   null: false
+    t.integer  "developer_id",             limit: 4,     null: false
     t.datetime "developed_at"
-    t.string   "serial_number", limit: 5
-    t.text     "blurb",         limit: 65535
-    t.float    "price",         limit: 24
+    t.string   "serial_number",            limit: 5
+    t.text     "blurb",                    limit: 65535
+    t.float    "price",                    limit: 24
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cover_image_file_name",    limit: 255
+    t.string   "cover_image_content_type", limit: 255
+    t.integer  "cover_image_file_size",    limit: 4
+    t.datetime "cover_image_updated_at"
   end
 
   add_index "programs", ["developer_id"], name: "fk_programs_developers", using: :btree
