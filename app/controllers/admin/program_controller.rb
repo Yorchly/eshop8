@@ -61,7 +61,7 @@ class Admin::ProgramController < ApplicationController
     end
 
     def program_params
-      params.require(:program).permit(:name, :type, :developer_id, :developer_at, { :supplier_ids => [] },
+      params.require(:program).permit(:name, :type, :developer_id, :developed_at, { :supplier_ids => [] },
                                    :serial_number, :blurb, :price, :cover_image)
     end
 end

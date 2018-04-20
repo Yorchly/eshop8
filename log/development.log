@@ -4140,3 +4140,43 @@ Unpermitted parameters: developed_at(1i), developed_at(2i), developed_at(3i), de
   Rendered admin/program/_form.html.erb (5.1ms)
   Rendered admin/program/new.html.erb within layouts/application (6.1ms)
 Completed 200 OK in 33ms (Views: 21.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-20 17:54:15 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 211ms (Views: 203.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-20 17:54:16 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[35mProgram Load (0.3ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0
+  Rendered admin/program/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 44.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/program/new" for 127.0.0.1 at 2018-04-20 17:54:18 +0200
+Processing by Admin::ProgramController#new as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  [1m[35mSupplier Load (0.2ms)[0m  SELECT `suppliers`.* FROM `suppliers`
+  Rendered admin/program/_form.html.erb (53.6ms)
+  Rendered admin/program/new.html.erb within layouts/application (57.8ms)
+Completed 200 OK in 99ms (Views: 88.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/admin/program/create?id=" for 127.0.0.1 at 2018-04-20 17:54:36 +0200
+Processing by Admin::ProgramController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QQ1Hv9ZVSQdXYf9srfiyHv+dM6P02DOVs/oJi64qmpMYB6Kx+IopyPmY/ngKIlZ0XPSS2FFisMvyZAQdiq0y0Q==", "program"=>{"name"=>"Hola", "developer_id"=>"1", "supplier_ids"=>["1"], "developed_at(1i)"=>"2018", "developed_at(2i)"=>"4", "developed_at(3i)"=>"20", "developed_at(4i)"=>"15", "developed_at(5i)"=>"54", "serial_number"=>"555", "blurb"=>"Hola que tal?", "price"=>"25.02", "cover_image"=>#<ActionDispatch::Http::UploadedFile:0x007efc1dec76e0 @tempfile=#<Tempfile:/tmp/RackMultipart20180420-6965-1g7uuv9.jpg>, @original_filename="ChilledCow.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"program[cover_image]\"; filename=\"ChilledCow.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create program", "id"=>""}
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 1 LIMIT 1[0m
+Command :: file -b --mime '/tmp/2fc566220f58198055e74c454234436320180420-6965-168wvoq.jpg'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/tmp/2fc566220f58198055e74c454234436320180420-6965-1axdbs7.jpg'
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mProgram Exists (0.2ms)[0m  SELECT  1 AS one FROM `programs` WHERE `programs`.`serial_number` = BINARY '555' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mDeveloper Load (0.2ms)[0m  SELECT `developers`.* FROM `developers`
+  [1m[36mSupplier Load (0.2ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers`[0m
+  Rendered admin/program/_form.html.erb (14.8ms)
+  Rendered admin/program/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 87ms (Views: 36.8ms | ActiveRecord: 2.0ms)
