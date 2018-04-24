@@ -2,17 +2,17 @@ class Admin::ProgramController < ApplicationController
   def new
     load_data
     @program = Program.new
-    @page_title = 'Create new program'
+    @page_title = 'Crear nuevo programa'
   end
 
   def create
     @program = Program.new(program_params)
     if @program.save
-      flash[:notice] = "Program #{@program.name} was succesfully created."
+      flash[:notice] = "El programa #{@program.name} ha sido creado correctamente."
       redirect_to :action => 'index'
     else
       load_data
-      @page_title = 'Create new program'
+      @page_title = 'Crear nuevo programa'
       render :action => 'new'
     end
   end
@@ -20,17 +20,17 @@ class Admin::ProgramController < ApplicationController
   def edit
     load_data
     @program = Program.find(params[:id])
-    @page_title = 'Edit program'
+    @page_title = 'Editar programa'
   end
 
   def update
     @program = Program.find(params[:id])
     if @program.update_attributes(program_params)
-      flash[:notice] = "Program #{@program.name} was succesfully updated."
+      flash[:notice] = "El programa #{@program.name} ha sido actualizado correctamente."
       redirect_to :action => 'show', :id => @program
     else
       load_data
-      @page_title = 'Edit program'
+      @page_title = 'Editar programa'
       render :action => 'edit'
     end
   end
@@ -38,7 +38,7 @@ class Admin::ProgramController < ApplicationController
   def destroy
     @program = Program.find(params[:id])
     @program.destroy
-    flash[:notice] = "Succesfully deleted program #{@program.name}."
+    flash[:notice] = "#{@program.name} eliminado correctamente."
     redirect_to :action => 'index'
   end
 
@@ -50,7 +50,7 @@ class Admin::ProgramController < ApplicationController
   def index
     sort_by = params[:sort_by]
     @programs = Program.order(sort_by).paginate(:page => params[:page], :per_page => 5)
-    @page_title = 'Listing programs'
+    @page_title = 'Lista de programas'
   end
 
   private

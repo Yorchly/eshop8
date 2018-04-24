@@ -1,32 +1,32 @@
 class Admin::DeveloperController < ApplicationController
  def new
     @developer = Developer.new
-    @page_title = 'Create new developer'
+    @page_title = 'Crear nuevo desarrollador'
   end
 
   def create
     @developer = Developer.new(developer_params)
     if @developer.save
-      flash[:notice] = "developer #{@developer.name} was succesfully created."
+      flash[:notice] = "El desarrollador #{@developer.name} ha sido creado correctamente."
       redirect_to :action => 'index'
     else
-      @page_title = 'Create new developer'
+      @page_title = 'Crear nuevo desarrollador'
       render :action => 'new'
     end
   end
 
   def edit
     @developer = Developer.find(params[:id])
-    @page_title = 'Edit developer'
+    @page_title = 'Editar desarrollador'
   end
 
   def update
     @developer = Developer.find(params[:id])
     if @developer.update_attributes(developer_params)
-       flash[:notice] = "developer #{@developer.name} was succesfully updated."
+       flash[:notice] = "El desarrollador #{@developer.name} ha sido actualizado correctamente."
        redirect_to :action => 'show', :id => @developer
     else
-       @page_title = 'Edit developer'
+       @page_title = 'Editar desarrollador'
        render :action => 'edit'
     end
   end
@@ -34,7 +34,7 @@ class Admin::DeveloperController < ApplicationController
   def destroy
     @developer = Developer.find(params[:id])
     @developer.destroy
-    flash[:notice] = "Succesfully deleted developer #{@developer.name}."
+    flash[:notice] = "#{@developer.name} eliminado correctamente."
     redirect_to :action => 'index'
   end
 
@@ -45,7 +45,7 @@ class Admin::DeveloperController < ApplicationController
 
   def index
     @developers = Developer.all
-    @page_title = 'Mostrando desarrolladores'
+    @page_title = 'Lista de desarrolladores'
   end
 
   private

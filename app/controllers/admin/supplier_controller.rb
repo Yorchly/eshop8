@@ -1,29 +1,29 @@
 class Admin::SupplierController < ApplicationController
   def new
     @supplier = Supplier.new
-    @page_title = 'Create new supplier'
+    @page_title = 'Crear nuevo proveedor'
   end
 
   def create
     @supplier = Supplier.new(supplier_params)
     if @supplier.save
-      flash[:notice] = "Supplier #{@supplier.name} was succesfully created."
+      flash[:notice] = "El proveedor #{@supplier.name} ha sido creado correctamente."
       redirect_to :action => 'index'
     else
-      @page_title = 'Create new supplier'
+      @page_title = 'Crear nuevo proveedor'
       render :action => 'new'
     end
   end
 
   def edit
     @supplier = Supplier.find(params[:id])
-    @page_title = 'Edit supplier'
+    @page_title = 'Editar proveedor'
   end
 
   def update
     @supplier = Supplier.find(params[:id])
     if @supplier.update_attributes(supplier_params)
-      flash[:notice] = "Supplier #{@supplier.name} was succesfully updated."
+      flash[:notice] = "El proveedor #{@supplier.name} ha sido actualizado correctamente."
       redirect_to :action => 'show', :id => @supplier
     else
       @page_title = 'Edit supplier'
@@ -34,7 +34,7 @@ class Admin::SupplierController < ApplicationController
   def destroy
     @supplier = Supplier.find(params[:id])
     @supplier.destroy
-    flash[:notice] = "Succesfully deleted supplier #{@supplier.name}."
+    flash[:notice] = "#{@supplier.name} eliminado correctamente."
     redirect_to :action => 'index'
   end
 
@@ -45,7 +45,7 @@ class Admin::SupplierController < ApplicationController
 
   def index
     @suppliers = Supplier.all
-    @page_title = 'Listing suppliers'
+    @page_title = 'Lista de proveedores'
   end
 
   private

@@ -1,5 +1,5 @@
 class AboutController < ApplicationController
   def index
-	@page_title = 'About Eshop8'
+	@page_title = 'Sobre Softonic sin Virus'
   end
 end

@@ -1,26 +1,26 @@
 <dl>
-  <dt>Name</dt>
+  <dt>Nombre</dt>
   <dd><%= @program.name %></dd>
-  <dt>Developer</dt>
+  <dt>Desarrollador</dt>
   <dd><%= @program.developer.name %></dd>
-  <dt>Developed at</dt>
+  <dt>Desarrollado el</dt>
   <dd><%= @program.developed_at.strftime("%d/%m/%Y at %I:%M%p") %></dd>
-  <dt>Suppliers</dt>
+  <dt>Proveedores</dt>
   <dd><%= @program.supplier_names %></dd>
-  <dt>Serial Number</dt>
+  <dt>Número de serie</dt>
   <dd><%= @program.serial_number %></dd>
-  <dt>Blurb</dt>
+  <dt>Descripción</dt>
   <%= RedCloth.new(@program.blurb).to_html.html_safe if @program.blurb %>
   <dt>Price</dt>
   <dd><%= @program.price %></dd>
-  <dt>Cover image</dt>
+  <dt>Imagen</dt>
   <% if @program.cover_image.exists? then %>
     <dd><%= image_tag @program.cover_image.url %></dd>
   <% else %>
     <dd><%= image_tag '/missing.png' %></dd>
-    <p> There is no cover image attached. Please upload one. </p>
+    <p> No hay ninguna imagen asociada a este programa. Por favor suba una. </p>
   <% end %>
 </dl>
 
-<%= link_to 'Edit', :action => 'edit', :id => @program %> |
-<%= link_to 'Back', :action => 'index' %>
+<%= link_to 'Editar', :action => 'edit', :id => @program %> |
+<%= link_to 'Atrás', :action => 'index' %>
