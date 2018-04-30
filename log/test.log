@@ -2978,3 +2978,244 @@ FOREIGN KEY (`supplier_id`)
   [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:21:47', '2018-04-24 09:21:47', 980190962)[0m
   [1m[35m (48.3ms)[0m  ROLLBACK
   [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (66.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.6ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (44.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (50.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.6ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (47.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (49.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (52.2ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (51.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (50.1ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (50.9ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (49.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (52.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:07', '2018-04-24 09:50:07')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:07', '2018-04-24 09:50:07')[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:07', '2018-04-24 09:50:07', 980190962)[0m
+  [1m[35m (51.3ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (51.3ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (50.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (49.8ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (51.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (49.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (51.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (49.4ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (50.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (52.7ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (52.3ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (53.5ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `developers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Apress', '2018-04-24 09:50:08', '2018-04-24 09:50:08')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `developers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Emporium', '2018-04-24 09:50:08', '2018-04-24 09:50:08')[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `programs`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `programs` (`created_at`, `updated_at`, `id`) VALUES ('2018-04-24 09:50:08', '2018-04-24 09:50:08', 980190962)[0m
+  [1m[35m (107.4ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m

@@ -23,6 +23,6 @@ class Program < ActiveRecord::Base
   end
 
   def self.latest(num)
-    all.order("program.id desc").includes(:suppliers, :developer).limit(num)
+    all.order("programs.id desc").includes(:suppliers, :developer).limit(num)
   end
 end

@@ -1,0 +1,11 @@
+<dl id = 'programs'>
+  <% for program in @programs %>
+    <dt>
+      <%= link_to program.name, :action => 'show', :id => program %>
+    </dt>
+    <% for supplier in program.suppliers %>
+      <dd><%= supplier.last_name %>, <%= supplier.first_name %></dd>
+    <% end %>
+    <dd><%= sprintf("Tipo: %s. Precio: %.2f €. Número de serie: %s", program.kind, program.price, program.serial_number) %> </dd>
+  <% end %>
+</dl>

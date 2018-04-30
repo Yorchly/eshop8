@@ -8988,3 +8988,1329 @@ Processing by Admin::DeveloperController#index as HTML
   Rendered admin/developer/_developer.html.erb (10.0ms)
   Rendered admin/developer/index.html.erb within layouts/application (13.1ms)
 Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-04-24 11:50:59 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-24 11:51:05 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[36mProgram Load (0.6ms)[0m  [1mSELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM `programs`
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 48ms (Views: 43.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/program?page=2" for 127.0.0.1 at 2018-04-24 11:51:07 +0200
+Processing by Admin::ProgramController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mProgram Load (0.4ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 5
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 4 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 5 LIMIT 1
+  Rendered admin/program/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/program?page=1" for 127.0.0.1 at 2018-04-24 11:51:09 +0200
+Processing by Admin::ProgramController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mProgram Load (0.5ms)[0m  [1mSELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `programs`
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/program?page=2" for 127.0.0.1 at 2018-04-24 11:51:11 +0200
+Processing by Admin::ProgramController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mProgram Load (0.7ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 5
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 4 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 5 LIMIT 1
+  Rendered admin/program/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/program?page=1" for 127.0.0.1 at 2018-04-24 11:51:25 +0200
+Processing by Admin::ProgramController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `programs`
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 47ms (Views: 44.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/program?page=2" for 127.0.0.1 at 2018-04-24 11:51:27 +0200
+Processing by Admin::ProgramController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mProgram Load (0.6ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 5
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 4 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 5 LIMIT 1
+  Rendered admin/program/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/program/edit?id=7" for 127.0.0.1 at 2018-04-24 11:51:41 +0200
+Processing by Admin::ProgramController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProgram Load (0.5ms)[0m  [1mSELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 7 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.8ms)[0m  SELECT `developers`.* FROM `developers`
+  [1m[36mSupplier Load (0.6ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `programs_suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` WHERE `programs_suppliers`.`program_id` = 7[0m
+  [1m[35mSupplier Load (0.4ms)[0m  SELECT `suppliers`.* FROM `suppliers`
+  Rendered admin/program/_form.html.erb (14.6ms)
+  Rendered admin/program/edit.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/admin/program/update?id=7" for 127.0.0.1 at 2018-04-24 11:51:56 +0200
+Processing by Admin::ProgramController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tEB/5x2btDqjjt/lBJdw/T9SqQdGtRgjOHVECfTMn7JS5DS6pc1W4uLhhyyQfKFkTaGcmvdM8GJUM46I6oQ8lA==", "program"=>{"name"=>"Spiro", "kind"=>"Plataforma", "developer_id"=>"3", "supplier_ids"=>["2", "3", "4"], "developed_at(1i)"=>"2018", "developed_at(2i)"=>"4", "developed_at(3i)"=>"24", "developed_at(4i)"=>"09", "developed_at(5i)"=>"46", "serial_number"=>"471", "blurb"=>"A completar.", "price"=>"98.0"}, "commit"=>"Actualizar programa", "id"=>"7"}
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4)[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `programs_suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` WHERE `programs_suppliers`.`program_id` = 7
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 3 LIMIT 1[0m
+  [1m[35mProgram Exists (0.3ms)[0m  SELECT  1 AS one FROM `programs` WHERE (`programs`.`serial_number` = BINARY '471' AND `programs`.`id` != 7) LIMIT 1
+  [1m[36mSQL (23.6ms)[0m  [1mUPDATE `programs` SET `developer_id` = 3, `updated_at` = '2018-04-24 09:51:56' WHERE `programs`.`id` = 7[0m
+  [1m[35m (81.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/program/show/7
+Completed 302 Found in 119ms (ActiveRecord: 107.3ms)
+
+
+Started GET "/admin/program/show/7" for 127.0.0.1 at 2018-04-24 11:51:57 +0200
+Processing by Admin::ProgramController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 7 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 3 LIMIT 1
+  [1m[36mSupplier Load (0.4ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `programs_suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` WHERE `programs_suppliers`.`program_id` = 7[0m
+  Rendered admin/program/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-04-24 11:56:15 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-04-24 11:56:18 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (8.8ms)
+  Rendered admin/developer/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/supplier" for 127.0.0.1 at 2018-04-24 11:56:20 +0200
+Processing by Admin::SupplierController#index as HTML
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers`[0m
+  Rendered admin/supplier/_supplier.html.erb (10.1ms)
+  Rendered admin/supplier/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-04-24 11:56:20 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (11.5ms)
+  Rendered admin/developer/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-04-24 11:56:21 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-04-24 11:59:21 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-04-24 11:59:22 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  Rendered admin/developer/_developer.html.erb (6.0ms)
+  Rendered admin/developer/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 50ms (Views: 42.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/developer/new" for 127.0.0.1 at 2018-04-24 11:59:23 +0200
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (0.3ms)
+  Rendered admin/developer/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/developer/create" for 127.0.0.1 at 2018-04-24 11:59:24 +0200
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yBND9UIfNeKMskjWVd6Bnb+116kpH1fq+JmmLOcAt3Autwio+knXOs3dEB/BNVAEzUbiNJjmv6uU32yt+UgUVg==", "developer"=>{"name"=>""}, "commit"=>"Crear desarollador"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDeveloper Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered admin/developer/_form.html.erb (1.9ms)
+  Rendered admin/developer/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 28.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/supplier" for 127.0.0.1 at 2018-04-24 12:01:37 +0200
+Processing by Admin::SupplierController#index as HTML
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers`[0m
+  Rendered admin/supplier/_supplier.html.erb (4.8ms)
+  Rendered admin/supplier/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-04-24 12:01:37 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (5.9ms)
+  Rendered admin/developer/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 43ms (Views: 38.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/developer/new" for 127.0.0.1 at 2018-04-24 12:01:38 +0200
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (1.2ms)
+  Rendered admin/developer/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/developer/create" for 127.0.0.1 at 2018-04-24 12:01:40 +0200
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fe0/0wQzFxzTeiOr2z9AmA3GaMQU2L+5qQ7jMLtkITzzSXSOvGX1xJIVe2JP1JEBfzVdWaUhV/jFSCmxpSyCGg==", "developer"=>{"name"=>""}, "commit"=>"Crear desarollador"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Exists (0.3ms)[0m  SELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered admin/developer/_form.html.erb (1.9ms)
+  Rendered admin/developer/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 36ms (Views: 28.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-04-24 12:06:47 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (8.8ms)
+  Rendered admin/developer/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/developer/new" for 127.0.0.1 at 2018-04-24 12:06:49 +0200
+Processing by Admin::DeveloperController#new as HTML
+  Rendered admin/developer/_form.html.erb (1.1ms)
+  Rendered admin/developer/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/developer/create" for 127.0.0.1 at 2018-04-24 12:06:50 +0200
+Processing by Admin::DeveloperController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QqlFxmOLtWY8E15N0tL7FuwAraJRYpWEYK2cdaOqqTukDQ6b291Xvn18BoRGOSqPnvOYP+CbfcUM61b0veIKHQ==", "developer"=>{"name"=>""}, "commit"=>"Crear desarollador"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDeveloper Exists (0.4ms)[0m  SELECT  1 AS one FROM `developers` WHERE `developers`.`name` = BINARY '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered admin/developer/_form.html.erb (1.8ms)
+  Rendered admin/developer/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 35ms (Views: 29.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/developer" for 127.0.0.1 at 2018-04-24 12:11:12 +0200
+Processing by Admin::DeveloperController#index as HTML
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT `developers`.* FROM `developers`
+  Rendered admin/developer/_developer.html.erb (8.4ms)
+  Rendered admin/developer/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-24 12:24:13 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[36mProgram Load (0.3ms)[0m  [1mSELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `programs`
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 64ms (Views: 48.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/program/new" for 127.0.0.1 at 2018-04-24 12:24:14 +0200
+Processing by Admin::ProgramController#new as HTML
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers`
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers`[0m
+  Rendered admin/program/_form.html.erb (20.2ms)
+  Rendered admin/program/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-04-24 12:50:24 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 98ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/catalog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-04-24 12:50:24 +0200
+
+
+Started GET "/assets/catalog.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-04-24 12:50:24 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 12:50:27 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mProgram Load (0.4ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)[0m
+  Rendered catalog/_programs.html.erb (52.6ms)
+  Rendered catalog/index.html.erb within layouts/application (54.0ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 3.7ms)
+
+ActionView::Template::Error (Association named 'supplier' was not found on Program; perhaps you misspelled it?):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     <dt>
+    4:       <%= link_to program.name, :action => 'show', :id => program %>
+    5:     </dt>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333231682640'
+  app/views/catalog/index.html.erb:1:in `_app_views_catalog_index_html_erb___335463280980110099_70333231728260'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (50.8ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-24 12:50:52 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[35mProgram Load (0.3ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.3ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 62ms (Views: 58.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/program/new" for 127.0.0.1 at 2018-04-24 12:50:54 +0200
+Processing by Admin::ProgramController#new as HTML
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers`[0m
+  [1m[35mSupplier Load (0.4ms)[0m  SELECT `suppliers`.* FROM `suppliers`
+  Rendered admin/program/_form.html.erb (29.0ms)
+  Rendered admin/program/new.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 76ms (Views: 69.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 12:51:31 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  Rendered catalog/_programs.html.erb (19.5ms)
+  Rendered catalog/index.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (Association named 'supplier' was not found on Program; perhaps you misspelled it?):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     <dt>
+    4:       <%= link_to program.name, :action => 'show', :id => program %>
+    5:     </dt>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333232899820'
+  app/views/catalog/index.html.erb:1:in `_app_views_catalog_index_html_erb___335463280980110099_70333231728260'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 12:53:30 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  Rendered catalog/_programs.html.erb (5.6ms)
+  Rendered catalog/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (Association named 'supplier' was not found on Program; perhaps you misspelled it?):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     <dt>
+    4:       <%= link_to program.name, :action => 'show', :id => program %>
+    5:     </dt>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333227837060'
+  app/views/catalog/index.html.erb:1:in `_app_views_catalog_index_html_erb___335463280980110099_70333231728260'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (45.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 12:53:42 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.7ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  Rendered catalog/_programs.html.erb (7.4ms)
+  Rendered catalog/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (Association named 'supplier' was not found on Program; perhaps you misspelled it?):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     <dt>
+    4:       <%= link_to program.name, :action => 'show', :id => program %>
+    5:     </dt>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333227837060'
+  app/views/catalog/index.html.erb:1:in `_app_views_catalog_index_html_erb___335463280980110099_70333231728260'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.0ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (46.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 12:53:43 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (1.5ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  Rendered catalog/_programs.html.erb (7.7ms)
+  Rendered catalog/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (Association named 'supplier' was not found on Program; perhaps you misspelled it?):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     <dt>
+    4:       <%= link_to program.name, :action => 'show', :id => program %>
+    5:     </dt>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333227837060'
+  app/views/catalog/index.html.erb:1:in `_app_views_catalog_index_html_erb___335463280980110099_70333231728260'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 12:54:59 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  Rendered catalog/_programs.html.erb (5.5ms)
+  Rendered catalog/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (Association named 'supplier' was not found on Program; perhaps you misspelled it?):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     <dt>
+    4:       <%= link_to program.name, :action => 'show', :id => program %>
+    5:     </dt>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333227837060'
+  app/views/catalog/index.html.erb:1:in `_app_views_catalog_index_html_erb___335463280980110099_70333231728260'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 12:58:43 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  Rendered catalog/_programs.html.erb (5.5ms)
+  Rendered catalog/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (Association named 'supplier' was not found on Program; perhaps you misspelled it?):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     <dt>
+    4:       <%= link_to program.name, :action => 'show', :id => program %>
+    5:     </dt>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333227837060'
+  app/views/catalog/index.html.erb:1:in `_app_views_catalog_index_html_erb___335463280980110099_70333231859920'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 12:59:34 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  Rendered catalog/_programs.html.erb (6.2ms)
+  Rendered catalog/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (Association named 'supplier' was not found on Program; perhaps you misspelled it?):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     
+    4:   <% end %>
+    5: </dl>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333232919100'
+  app/views/catalog/index.html.erb:1:in `_app_views_catalog_index_html_erb___335463280980110099_70333231859920'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 13:02:34 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  Rendered catalog/_programs.html.erb (22.2ms)
+  Rendered catalog/index.html.erb within layouts/application (22.8ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 3.1ms)
+
+ActionView::Template::Error (Association named 'supplier' was not found on Program; perhaps you misspelled it?):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     <dt>
+    4:       <%= link_to program.name, :action => 'show', :id => program %>
+    5:     </dt>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333234153560'
+  app/views/catalog/index.html.erb:1:in `_app_views_catalog_index_html_erb___335463280980110099_70333231859920'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 13:04:51 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  [1m[36mHABTM_Suppliers Load (0.7ms)[0m  [1mSELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)[0m
+  [1m[35mSupplier Load (0.6ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  Rendered catalog/_programs.html.erb (75.4ms)
+  Rendered catalog/index.html.erb within layouts/application (76.4ms)
+Completed 200 OK in 113ms (Views: 97.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-04-24 13:05:20 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mProgram Load (0.4ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 5
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (6, 1)[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (2, 1)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (3, 5, 2)[0m
+  Rendered catalog/_programs.html.erb (13.9ms)
+  Rendered catalog/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/?page=1" for 127.0.0.1 at 2018-04-24 13:05:21 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mProgram Load (0.6ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)
+  [1m[36mSupplier Load (0.7ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `programs`
+  Rendered catalog/_programs.html.erb (18.9ms)
+  Rendered catalog/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/?page=1" for 127.0.0.1 at 2018-04-24 13:07:40 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mProgram Load (0.6ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  [1m[36mHABTM_Suppliers Load (0.6ms)[0m  [1mSELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  Rendered catalog/_programs.html.erb (15.7ms)
+  Rendered catalog/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/?page=1" for 127.0.0.1 at 2018-04-24 13:08:07 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mProgram Load (0.3ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)[0m
+  [1m[35mHABTM_Suppliers Load (0.5ms)[0m  SELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)
+  [1m[36mSupplier Load (0.4ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `programs`
+  Rendered catalog/_programs.html.erb (15.4ms)
+  Rendered catalog/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-04-24 13:08:49 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (6, 1)
+  [1m[36mHABTM_Suppliers Load (0.5ms)[0m  [1mSELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (2, 1)[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (3, 5, 2)
+  Rendered catalog/_programs.html.erb (13.6ms)
+  Rendered catalog/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/?page=1" for 127.0.0.1 at 2018-04-24 13:08:55 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mProgram Load (0.7ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  [1m[36mHABTM_Suppliers Load (0.8ms)[0m  [1mSELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)[0m
+  [1m[35mSupplier Load (0.6ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  Rendered catalog/_programs.html.erb (23.4ms)
+  Rendered catalog/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 66ms (Views: 61.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/supplier" for 127.0.0.1 at 2018-04-24 13:09:11 +0200
+Processing by Admin::SupplierController#index as HTML
+  [1m[35mSupplier Load (0.4ms)[0m  SELECT `suppliers`.* FROM `suppliers`
+  Rendered admin/supplier/_supplier.html.erb (4.7ms)
+  Rendered admin/supplier/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/supplier/edit?id=5" for 127.0.0.1 at 2018-04-24 13:09:13 +0200
+Processing by Admin::SupplierController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 5 LIMIT 1[0m
+  Rendered admin/supplier/_form.html.erb (1.7ms)
+  Rendered admin/supplier/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/supplier/update?id=5" for 127.0.0.1 at 2018-04-24 13:09:18 +0200
+Processing by Admin::SupplierController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t6UsH4HAJmio3RauXtwvVWKlv8mDq8Xh9xWOKPXr7/dRAWdCOZbEsOmyTmfKN/7MEFaKVDJSLaCbU0Sp66NM0Q==", "supplier"=>{"first_name"=>"Mónica", "last_name"=>"Carrillo"}, "commit"=>"Actualizar proveedor", "id"=>"5"}
+  [1m[35mSupplier Load (0.6ms)[0m  SELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 5 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `suppliers` SET `first_name` = 'Mónica', `updated_at` = '2018-04-24 11:09:18' WHERE `suppliers`.`id` = 5
+  [1m[36m (60.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/supplier/show/5
+Completed 302 Found in 68ms (ActiveRecord: 61.9ms)
+
+
+Started GET "/admin/supplier/show/5" for 127.0.0.1 at 2018-04-24 13:09:18 +0200
+Processing by Admin::SupplierController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSupplier Load (0.4ms)[0m  SELECT  `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` = 5 LIMIT 1
+  Rendered admin/supplier/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-24 13:09:20 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `programs`
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/catalog" for 127.0.0.1 at 2018-04-24 13:09:23 +0200
+
+ActionController::RoutingError (No route matches [GET] "/admin/catalog"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.9) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.9) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.9) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  rack (1.6.9) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.9) lib/rack/handler/webrick.rb:88:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (40.7ms)
+
+
+Started GET "/admin/catalog" for 127.0.0.1 at 2018-04-24 13:09:28 +0200
+
+ActionController::RoutingError (No route matches [GET] "/admin/catalog"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.9) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.9) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.9) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  rack (1.6.9) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.9) lib/rack/handler/webrick.rb:88:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.3ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-24 13:11:18 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[35mProgram Load (0.6ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 66ms (Views: 61.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/catalog" for 127.0.0.1 at 2018-04-24 13:11:19 +0200
+
+ActionController::RoutingError (No route matches [GET] "/admin/catalog"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.9) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.9) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.9) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  rack (1.6.9) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.9) lib/rack/handler/webrick.rb:88:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.5ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-24 13:12:46 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[36mProgram Load (0.8ms)[0m  [1mSELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `programs`
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (2.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 70ms (Views: 64.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/catalog" for 127.0.0.1 at 2018-04-24 13:12:47 +0200
+
+ActionController::RoutingError (No route matches [GET] "/catalog"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.9) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.9) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.9) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  rack (1.6.9) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.9) lib/rack/handler/webrick.rb:88:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.6ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.8ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-24 13:12:49 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[35mProgram Load (4.5ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.7ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 76ms (Views: 68.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-24 13:12:51 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `programs`
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/catalog" for 127.0.0.1 at 2018-04-24 13:12:54 +0200
+
+ActionController::RoutingError (No route matches [GET] "/catalog"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.9) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.9) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.9) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.9) lib/rack/lock.rb:17:in `call'
+  rack (1.6.9) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.9) lib/rack/handler/webrick.rb:88:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/joaquin/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.5ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-24 13:14:01 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[35mProgram Load (0.4ms)[0m  SELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 67ms (Views: 53.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/catalog" for 127.0.0.1 at 2018-04-24 13:14:05 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  [1m[36mHABTM_Suppliers Load (0.4ms)[0m  [1mSELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)[0m
+  [1m[35mSupplier Load (0.4ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  Rendered catalog/_programs.html.erb (33.8ms)
+  Rendered catalog/index.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 70ms (Views: 65.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/catalog" for 127.0.0.1 at 2018-04-24 13:14:36 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mProgram Load (0.5ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `programs`
+  Rendered catalog/_programs.html.erb (16.9ms)
+  Rendered catalog/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/catalog/latest" for 127.0.0.1 at 2018-04-24 13:14:51 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mSQL (1.9ms)[0m  [1mSELECT  DISTINCT `programs`.`id` FROM `programs` LEFT OUTER JOIN `programs_suppliers` ON `programs_suppliers`.`program_id` = `programs`.`id` LEFT OUTER JOIN `suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` LEFT OUTER JOIN `developers` ON `developers`.`id` = `programs`.`developer_id`  ORDER BY program.id desc LIMIT 5[0m
+  Rendered catalog/_programs.html.erb (36.8ms)
+  Rendered catalog/latest.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.9ms)
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'program.id' in 'order clause': SELECT  DISTINCT `programs`.`id` FROM `programs` LEFT OUTER JOIN `programs_suppliers` ON `programs_suppliers`.`program_id` = `programs`.`id` LEFT OUTER JOIN `suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` LEFT OUTER JOIN `developers` ON `developers`.`id` = `programs`.`developer_id`  ORDER BY program.id desc LIMIT 5):
+    1: <dl id = 'programs'>
+    2:   <% for program in @programs %>
+    3:     <dt>
+    4:       <%= link_to program.name, :action => 'show', :id => program %>
+    5:     </dt>
+  app/views/catalog/_programs.html.erb:2:in `_app_views_catalog__programs_html_erb__724410393996524196_70333229591240'
+  app/views/catalog/latest.html.erb:1:in `_app_views_catalog_latest_html_erb__1494257961266572528_70333117921700'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.6ms)
+
+
+Started GET "/catalog/latest" for 127.0.0.1 at 2018-04-24 13:18:19 +0200
+Processing by CatalogController#latest as HTML
+  [1m[35mProgram Load (0.4ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.5ms)[0m  [1mSELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)[0m
+  Rendered catalog/_programs.html.erb (50.9ms)
+  Rendered catalog/latest.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 88ms (Views: 74.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/catalog/show/7" for 127.0.0.1 at 2018-04-24 13:18:35 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mProgram Load (0.5ms)[0m  SELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 7 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `developer_names' for #<Program:0x007fef6c6a70d0>):
+    1: <h2>by <%=@program.developer_names %></h2>
+    2: <% if @program.cover_image.exists? then %>
+    3:   <dd><%= image_tag @program.cover_image.url %></dd>
+    4: <% else %>
+  app/views/catalog/show.html.erb:1:in `_app_views_catalog_show_html_erb__3578352104601713737_70333146410020'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.9ms)
+
+
+Started GET "/catalog/show/7" for 127.0.0.1 at 2018-04-24 13:20:16 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 7 LIMIT 1[0m
+  Rendered catalog/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `suppliers_names' for #<Program:0x007fef6d1f3c90>):
+    1: <h2>by <%=@program.suppliers_names %></h2>
+    2: <% if @program.cover_image.exists? then %>
+    3:   <dd><%= image_tag @program.cover_image.url %></dd>
+    4: <% else %>
+  app/views/catalog/show.html.erb:1:in `_app_views_catalog_show_html_erb__3578352104601713737_70333152334300'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.1ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.4ms)
+
+
+Started GET "/catalog/latest" for 127.0.0.1 at 2018-04-24 13:20:22 +0200
+Processing by CatalogController#latest as HTML
+  [1m[35mProgram Load (0.5ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.6ms)[0m  [1mSELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)[0m
+  [1m[35mSupplier Load (0.7ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)
+  [1m[36mDeveloper Load (0.8ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)[0m
+  Rendered catalog/_programs.html.erb (23.7ms)
+  Rendered catalog/latest.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 72ms (Views: 68.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/catalog/show/6" for 127.0.0.1 at 2018-04-24 13:21:10 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mProgram Load (0.5ms)[0m  SELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 6 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `suppliers_names' for #<Program:0x007fef6c5fb8e8>):
+    1: <h2>by <%=@program.suppliers_names %></h2>
+    2: <% if @program.cover_image.exists? then %>
+    3:   <dd><%= image_tag @program.cover_image.url %></dd>
+    4: <% else %>
+  app/views/catalog/show.html.erb:1:in `_app_views_catalog_show_html_erb__3578352104601713737_70333152334300'
+
+
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.9ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/joaquin/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.8ms)
+
+
+Started GET "/catalog/show/6" for 127.0.0.1 at 2018-04-24 13:21:24 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProgram Load (0.3ms)[0m  [1mSELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 6 LIMIT 1[0m
+  [1m[35mSupplier Load (0.6ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `programs_suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` WHERE `programs_suppliers`.`program_id` = 6
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 4 LIMIT 1[0m
+  Rendered catalog/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 13:21:46 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mProgram Load (0.5ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)
+  [1m[36mSupplier Load (0.6ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `programs`
+  Rendered catalog/_programs.html.erb (17.9ms)
+  Rendered catalog/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/catalog/show/5" for 127.0.0.1 at 2018-04-24 13:21:51 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProgram Load (0.4ms)[0m  [1mSELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 5 LIMIT 1[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `programs_suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` WHERE `programs_suppliers`.`program_id` = 5
+  [1m[36mDeveloper Load (0.3ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  Rendered catalog/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/catalog/show/4" for 127.0.0.1 at 2018-04-24 13:22:17 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mProgram Load (0.5ms)[0m  SELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 4 LIMIT 1
+  [1m[36mSupplier Load (2.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `programs_suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` WHERE `programs_suppliers`.`program_id` = 4[0m
+  [1m[35mDeveloper Load (0.4ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 13:22:41 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (1.0ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  [1m[36mHABTM_Suppliers Load (0.8ms)[0m  [1mSELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  Rendered catalog/_programs.html.erb (25.0ms)
+  Rendered catalog/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-04-24 13:22:43 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mProgram Load (0.5ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 5
+  [1m[36mDeveloper Load (0.5ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (6, 1)[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (2, 1)
+  [1m[36mSupplier Load (0.6ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (3, 5, 2)[0m
+  Rendered catalog/_programs.html.erb (12.5ms)
+  Rendered catalog/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/catalog/show/2" for 127.0.0.1 at 2018-04-24 13:22:45 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProgram Load (0.4ms)[0m  SELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 2 LIMIT 1
+  [1m[36mSupplier Load (0.6ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `programs_suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` WHERE `programs_suppliers`.`program_id` = 2[0m
+  [1m[35mDeveloper Load (0.5ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-24 13:24:22 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mProgram Load (0.7ms)[0m  [1mSELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mDeveloper Load (0.6ms)[0m  SELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)
+  [1m[36mHABTM_Suppliers Load (0.6ms)[0m  [1mSELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)[0m
+  [1m[35mSupplier Load (0.4ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `programs`[0m
+  Rendered catalog/_programs.html.erb (22.4ms)
+  Rendered catalog/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 53ms (Views: 48.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2018-04-24 13:24:25 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mProgram Load (0.9ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 5
+  [1m[36mDeveloper Load (0.4ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (6, 1)[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (2, 1)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (3, 5, 2)[0m
+  Rendered catalog/_programs.html.erb (17.4ms)
+  Rendered catalog/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/catalog/show/2" for 127.0.0.1 at 2018-04-24 13:24:27 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProgram Load (0.8ms)[0m  SELECT  `programs`.* FROM `programs` WHERE `programs`.`id` = 2 LIMIT 1
+  [1m[36mSupplier Load (0.7ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `programs_suppliers` ON `suppliers`.`id` = `programs_suppliers`.`supplier_id` WHERE `programs_suppliers`.`program_id` = 2[0m
+  [1m[35mDeveloper Load (0.3ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-30 10:38:09 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (74.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35mProgram Load (16.1ms)[0m  SELECT  `programs`.* FROM `programs`  ORDER BY programs.id desc LIMIT 5 OFFSET 0
+  [1m[36mDeveloper Load (35.3ms)[0m  [1mSELECT `developers`.* FROM `developers` WHERE `developers`.`id` IN (3, 4, 1, 2)[0m
+  [1m[35mHABTM_Suppliers Load (24.9ms)[0m  SELECT `programs_suppliers`.* FROM `programs_suppliers` WHERE `programs_suppliers`.`program_id` IN (7, 6, 5, 4, 3)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 1, 5)[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `programs`
+  Rendered catalog/_programs.html.erb (365.6ms)
+  Rendered catalog/index.html.erb within layouts/application (399.6ms)
+Completed 200 OK in 1914ms (Views: 1673.9ms | ActiveRecord: 181.1ms)
+
+
+Started GET "/admin/program" for 127.0.0.1 at 2018-04-30 10:38:21 +0200
+Processing by Admin::ProgramController#index as HTML
+  [1m[36mProgram Load (1.0ms)[0m  [1mSELECT  `programs`.* FROM `programs` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `programs`
+  [1m[36mDeveloper Load (15.3ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m
+  [1m[35mDeveloper Load (0.9ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mDeveloper Load (0.8ms)[0m  SELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `developers`.* FROM `developers` WHERE `developers`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered admin/program/index.html.erb within layouts/application (81.3ms)
+Completed 200 OK in 156ms (Views: 136.4ms | ActiveRecord: 18.6ms)

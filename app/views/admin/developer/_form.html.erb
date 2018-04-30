@@ -1,6 +1,6 @@
 <% if @developer.errors.any? %>
   <div id="errorExplanation">
-  <h2><%= pluralize(@developer.errors.count, "error") %> prohibited this developer from being saved:</h2>
+  <h2><%= pluralize(@developer.errors.count, "error") %> error/es encontrados:</h2>
     <ul>
       <% @developer.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>

@@ -1,0 +1,18 @@
+<h2>Por <%=@program.supplier_names %></h2>
+<% if @program.cover_image.exists? then %>
+  <dd><%= image_tag @program.cover_image.url %></dd>
+<% else %>
+  <p>No existe imagen.</p>
+<% end %>
+<dl>
+  <dt>Precio</dt>
+  <dd><%= sprintf("%0.2f", @program.price) %></dd>
+  <dt>Tipo</dt>
+  <dd><%= @program.kind %></dd>
+  <dt>Desarrollador</dt>
+  <dd><%= @program.developer.name %></dd>
+  <dt>Descripción</dt>
+  <%= RedCloth.new(@program.blurb).to_html.html_safe if @program.blurb %>
+</dl>
+
+<p><%= link_to 'Catalog', :action => 'index' %> </p>

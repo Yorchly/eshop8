@@ -1,6 +1,6 @@
 <% if @program.errors.any? %>
   <div id="errorExplanation">
-  <h2><%= pluralize(@program.errors.count, "error") %> prohibited this program from being saved:</h2>
+  <h2><%= pluralize(@program.errors.count, "error") %> error/es encontrado:</h2>
     <ul>
       <% @program.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>

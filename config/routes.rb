@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   
-  root :to => 'about#index'
+  root :to => 'catalog#index'
 
   get 'about' => 'about#index'
   get 'admin/developer' => 'admin/developer#index'
   get 'admin/supplier' => 'admin/supplier#index'
   get 'admin/program' => 'admin/program#index'
+  get 'catalog' => 'catalog#index'
 
   get 'admin/developer/new'
   post 'admin/developer/create'
@@ -33,6 +34,11 @@ Rails.application.routes.draw do
   get 'admin/program/show'
   get 'admin/program/show/:id' => 'admin/program#show'
   get 'admin/program/index'
+
+  get 'catalog/show'
+  get 'catalog/show/:id' => 'catalog#show'
+  get 'catalog/index'
+  get 'catalog/latest'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
