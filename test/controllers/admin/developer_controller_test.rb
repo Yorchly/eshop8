@@ -35,12 +35,12 @@ class Admin::DeveloperControllerTest < ActionController::TestCase
   test "destroy" do
     assert_difference(Developer, :count, -1) do
       post :destroy, :id => 1
-      assert_equal flash[:notice], 'Succesfully deleted developer Apress.'
+      assert_equal flash[:notice], 'Apress eliminado correctamente.'
       assert_response :redirect
       assert_redirected_to :action => 'index'
       get :index
       assert_response :success
-      assert_select 'div#notice', 'Succesfully deleted developer Apress.'
+      assert_select 'div#notice', 'Apress eliminado correctamente.'
     end
   end
 

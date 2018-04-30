@@ -1,11 +1,80 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+pro_rails_ecommerce_1:
+  id: 1
+  name: Pro Rails E-Commerce
+  kind: 'Juego'
+  developer_id: 1
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 14
+  price: 45.0
+pro_rails_ecommerce_2:
+  id: 2
+  name: Pro Rails E-Commerce 2nd Edition
+  kind: 'Juego'
+  developer_id: 1
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 15
+  price: 65
+pro_rails_ecommerce_3:
+  id: 3
+  name: Pro Rails E-Commerce 3rd Edition
+  kind: 'Juego'
+  developer_id: 1
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 16
+  price: 85
+pro_rails_ecommerce_4:
+  id: 4
+  name: Pro Rails E-Commerce 4th Edition
+  kind: 'Juego'
+  developer_id: 1
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 17
+  price: 105
+pro_rails_ecommerce_5:
+  id: 5
+  name: Pro Rails E-Commerce 5th Edition
+  kind: 'Juego'
+  developer_id: 1
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 18
+  price: 125
+pro_rails_ecommerce_6:
+  id: 6
+  name: Pro Rails E-Commerce 6th Edition
+  kind: 'Juego'
+  developer_id: 1
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 19
+  price: 145
+pro_rails_ecommerce_7:
+  id: 7
+  name: Pro Rails E-Commerce 7th Edition
+  kind: 'Juego'
+  developer_id: 2
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 20
+  price: 165
+ruby_for_dummies_8:
+  id: 8
+  name: Ruby for Dummies
+  kind: 'Juego'
+  developer_id: 1
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 21
+  price: 185
+pride_and_prejudice_9:
+  id: 9
+  name: Pride and Prejudice
+  kind: 'Juego'
+  developer_id: 2
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 22
+  price: 40
+the_idiot_10:
+  id: 10
+  name: The Idiot
+  kind: 'Juego'
+  developer_id: 2
+  developed_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  serial_number: 23
+  price: 40
