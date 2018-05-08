@@ -2,6 +2,7 @@
   <% for program in @programs %>
     <dt>
       <%= link_to program.name, :action => 'show', :id => program %>
+      <%= link_to '+', :controller => 'cart', :action => 'add', :id => program %>
     </dt>
     <% for supplier in program.suppliers %>
       <dd><%= supplier.last_name %>, <%= supplier.first_name %></dd>
