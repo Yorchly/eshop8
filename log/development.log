@@ -12747,3 +12747,256 @@ Processing by CatalogController#index as HTML
   [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 2[0m
   Rendered cart/_cart.html.erb (2.0ms)
 Completed 200 OK in 66ms (Views: 61.5ms | ActiveRecord: 2.3ms)
+  [1m[36m (29.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (64.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateDevelopers (20180320095142)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/javi/projects/eshop8/db/migrate/20180320095142_create_developers.rb:5)
+  [1m[35m (36.7ms)[0m  CREATE TABLE `developers` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180320095142')
+  [1m[36m (3.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSuppliers (20180410094720)
+  [1m[35m (30.9ms)[0m  CREATE TABLE `suppliers` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180410094720')
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProgramsAndProgramsSuppliers (20180417101221)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/javi/projects/eshop8/db/migrate/20180417101221_create_programs_and_programs_suppliers.rb:11)
+  [1m[35m (27.1ms)[0m  CREATE TABLE `programs` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `kind` varchar(255) NOT NULL, `developer_id` int(11) NOT NULL, `developed_at` datetime, `serial_number` varchar(5), `blurb` text, `price` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/javi/projects/eshop8/db/migrate/20180417101221_create_programs_and_programs_suppliers.rb:17)
+  [1m[36m (30.6ms)[0m  [1mCREATE TABLE `programs_suppliers` (`id` int(11) auto_increment PRIMARY KEY, `supplier_id` int(11) NOT NULL, `program_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (87.7ms)[0m  ALTER TABLE programs_suppliers ADD CONSTRAINT fk_programs_suppliers_suppliers
+              FOREIGN KEY (supplier_id) REFERENCES suppliers(id) ON DELETE CASCADE
+  [1m[36m (81.1ms)[0m  [1mALTER TABLE programs_suppliers ADD CONSTRAINT fk_programs_suppliers_programs
+              FOREIGN KEY (program_id) REFERENCES programs(id) ON DELETE CASCADE[0m
+  [1m[35m (96.6ms)[0m  ALTER TABLE programs ADD CONSTRAINT fk_programs_developers
+              FOREIGN KEY (developer_id) REFERENCES developers(id) ON DELETE CASCADE
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180417101221')
+  [1m[36m (4.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddCoverImageAttachmentToProgram (20180420142034)
+  [1m[35m (55.0ms)[0m  ALTER TABLE `programs` ADD `cover_image_file_name` varchar(255)
+  [1m[36m (59.7ms)[0m  [1mALTER TABLE `programs` ADD `cover_image_content_type` varchar(255)[0m
+  [1m[35m (64.3ms)[0m  ALTER TABLE `programs` ADD `cover_image_file_size` int(11)
+  [1m[36m (50.9ms)[0m  [1mALTER TABLE `programs` ADD `cover_image_updated_at` datetime[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180420142034')[0m
+  [1m[35m (4.8ms)[0m  COMMIT
+Migrating to CreateCarts (20180508084333)
+  [1m[36m (32.4ms)[0m  [1mCREATE TABLE `carts` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180508084333')[0m
+  [1m[35m (3.7ms)[0m  COMMIT
+Migrating to CreateCartItems (20180508084343)
+  [1m[36m (32.1ms)[0m  [1mCREATE TABLE `cart_items` (`id` int(11) auto_increment PRIMARY KEY, `program_id` int(11), `cart_id` int(11), `price` float, `amount` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180508084343')[0m
+  [1m[35m (4.1ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'cart_items'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `cart_items`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'carts'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `carts`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'developers'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `developers`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'programs'
+
+  [1m[36m (0.4ms)[0m  [1mSHOW CREATE TABLE `programs`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'programs_suppliers'
+
+  [1m[36m (5.7ms)[0m  [1mSHOW CREATE TABLE `programs_suppliers`[0m
+  [1m[35m (0.6ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'suppliers'
+
+  [1m[36m (11.0ms)[0m  [1mSHOW CREATE TABLE `suppliers`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 11:59:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 2 LIMIT 1
+Completed 404 Not Found in 65ms (ActiveRecord: 4.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Cart with 'id'=2):
+  app/controllers/application_controller.rb:10:in `initialize_cart'
+
+
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.8ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.7ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (6.9ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.9ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (119.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-08 11:59:03 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 2 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Cart with 'id'=2):
+  app/controllers/application_controller.rb:10:in `initialize_cart'
+
+
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.6ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.0ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.6ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.1ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/javi/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (123.1ms)
+
+
+Started POST "/__web_console/repl_sessions/5e99ea4f39c2fff6de6ffdb9c3509652/trace" for 127.0.0.1 at 2018-05-08 11:59:25 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateOrders (20180508102301)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/javi/projects/eshop8/db/migrate/20180508102301_create_orders.rb:18)
+  [1m[35m (31.0ms)[0m  CREATE TABLE `orders` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255), `phone_number` varchar(255), `ship_to_first_name` varchar(255), `ship_to_last_name` varchar(255), `ship_to_address` varchar(255), `ship_to_city` varchar(255), `ship_to_postal_code` varchar(255), `ship_to_country_code` varchar(255), `customer_ip` varchar(255), `status` varchar(255), `error_message` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180508102301')
+  [1m[36m (4.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateOrderItems (20180508102306)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/javi/projects/eshop8/db/migrate/20180508102306_create_order_items.rb:8)
+  [1m[35m (26.0ms)[0m  CREATE TABLE `order_items` (`id` int(11) auto_increment PRIMARY KEY, `program_id` int(11), `order_id` int(11), `price` float, `amount` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (84.7ms)[0m  [1mALTER TABLE order_items ADD CONSTRAINT fk_order_items_orders
+              FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20180508102306')[0m
+  [1m[35m (6.8ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'cart_items'
+
+  [1m[36m (0.6ms)[0m  [1mSHOW CREATE TABLE `cart_items`[0m
+  [1m[35m (1.6ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'carts'
+
+  [1m[36m (0.3ms)[0m  [1mSHOW CREATE TABLE `carts`[0m
+  [1m[35m (1.5ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'developers'
+
+  [1m[36m (0.5ms)[0m  [1mSHOW CREATE TABLE `developers`[0m
+  [1m[35m (0.8ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'order_items'
+
+  [1m[36m (0.7ms)[0m  [1mSHOW CREATE TABLE `order_items`[0m
+  [1m[35m (2.0ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'orders'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'programs'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `programs`[0m
+  [1m[35m (7.7ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'programs_suppliers'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `programs_suppliers`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop8_development'
+  AND fk.table_name = 'suppliers'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `suppliers`[0m

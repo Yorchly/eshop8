@@ -12,10 +12,10 @@ class ProgramAdministrationTest < ActionDispatch::IntegrationTest
       :developer_id => developer.id,
       :supplier_ids => [supplier.id],
       :developed_at => Time.now,
-      :serial_number => '123-123-123-X',
+      :serial_number => '123',
       :blurb => 'A new Program of Ruby',
-      :kind => 325,
-      :price => 45.5
+      :kind => 'Juego',
+      :price => 45
     }
 
     george.list_programs
@@ -26,9 +26,9 @@ class ProgramAdministrationTest < ActionDispatch::IntegrationTest
       :developer_id => developer.id,
       :supplier_ids => [supplier.id],
       :developed_at => Time.now,
-      :serial_number => '123-123-123-X',
+      :serial_number => '123',
       :blurb => 'A very new Program of Ruby',
-      :kind => 350,
+      :kind => 'Prueba',
       :price => 50
     }
 
@@ -61,7 +61,7 @@ class ProgramAdministrationTest < ActionDispatch::IntegrationTest
       assert_response :success
       assert_template 'admin/program/index'
       page = Program.all.count / 5 + 1
-      get "/adprogram/index/?page=#{page}"
+      get "/admin/program/index/?page=#{page}"
       assert_select 'td', parameters[:program][:name]
       # assert_tag :tag => 'td', :content => parameters[:program][:name]
       program = Program.find_by_name(parameters[:program][:name])
