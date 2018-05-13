@@ -24,7 +24,6 @@ class Cart < ActiveRecord::Base
     ci
   end
 
-
   def total
     sum = 0
     cart_items.each do |item| sum += item.price * item.amount end

@@ -44,7 +44,7 @@ class Admin::ProgramController < ApplicationController
 
   def show
     @program = Program.find(params[:id])
-    #@page_title = program.name
+    @page_title = @program.name
   end
 
   def index
