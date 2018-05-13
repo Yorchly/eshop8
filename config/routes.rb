@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
+
   root :to => 'catalog#index'
 
   get 'about' => 'about#index'
+  get 'checkout' => 'checkout#index'
   get 'admin/developer' => 'admin/developer#index'
   get 'admin/supplier' => 'admin/supplier#index'
   get 'admin/program' => 'admin/program#index'
   get 'catalog' => 'catalog#index'
+  get 'admin/order' => 'admin/order#index'
 
   get 'admin/developer/new'
   post 'admin/developer/create'
@@ -35,6 +38,12 @@ Rails.application.routes.draw do
   get 'admin/program/show/:id' => 'admin/program#show'
   get 'admin/program/index'
 
+  post 'admin/order/close'
+  post 'admin/order/destroy'
+  get 'admin/order/show'
+  get 'admin/order/show/:id' => 'admin/order#show'
+  get 'admin/order/index'
+
   get 'catalog/show'
   get 'catalog/show/:id' => 'catalog#show'
   get 'catalog/index'
@@ -46,6 +55,10 @@ Rails.application.routes.draw do
   post 'cart/remove'
   get 'cart/clear'
   post 'cart/clear'
+	
+  get 'checkout/index'
+  post 'checkout/submit_order'
+  get 'checkout/thank_you'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
