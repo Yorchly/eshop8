@@ -1,0 +1,41 @@
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Juan", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Antonio", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Fernando", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Mario", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Pedro", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Andrea", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Fátima", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Esteban", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Lucía", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Ángel", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("José", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Nuria", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Esther", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO developers(name, created_at, updated_at) VALUES ("Elena", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("David", "Beckham", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Raúl", "González", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Gareth", "Bale", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Cristiano", "Ronaldo", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Leo", "Messi", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Andrés", "Iniesta", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Eva", "Hache", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Marie", "Curie", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Christopher", "MacCandless", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Paula", "Echevarría", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Óscar", "de Paula", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Ted", "Mosby", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Barney", "Stinson", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Robin", "Scherbatsky", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Lily", "Aldrin", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO suppliers(first_name, last_name, created_at, updated_at) VALUES ("Tommy", "Shelby", "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+
+INSERT INTO programs(name, kind, developer_id, developed_at, serial_number, blurb, price, created_at, updated_at) VALUES ("Skype", "De Pago", 45, "2018-05-15 08:03:00", 110, "Llamadas", 90, "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO programs(name, kind, developer_id, developed_at, serial_number, blurb, price, created_at, updated_at) VALUES ("Azure", "De Pago", 46, "2018-05-15 08:03:00", 111, "Sistemas Operativos", 290, "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO programs(name, kind, developer_id, developed_at, serial_number, blurb, price, created_at, updated_at) VALUES ("Spotify", "De Pago", 47, "2018-05-15 08:03:00", 210, "Música", 10, "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO programs(name, kind, developer_id, developed_at, serial_number, blurb, price, created_at, updated_at) VALUES ("Webmin", "Software Libre", 48, "2018-05-15 08:03:00", 110, "Administración de servidores", 0, "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO programs(name, kind, developer_id, developed_at, serial_number, blurb, price, created_at, updated_at) VALUES ("Nmap", "Software Libre", 49, "2018-05-15 08:03:00", 134, "Escáner de puertos", 0, "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO programs(name, kind, developer_id, developed_at, serial_number, blurb, price, created_at, updated_at) VALUES ("Whatsapp", "De Pago", 45, "2018-05-15 08:03:00", 220, "Chats", 1, "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO programs(name, kind, developer_id, developed_at, serial_number, blurb, price, created_at, updated_at) VALUES ("Sublime Text", "Gratuito", 46, "2018-05-15 08:03:00", 880, "Editor de texto", 0, "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+INSERT INTO programs(name, kind, developer_id, developed_at, serial_number, blurb, price, created_at, updated_at) VALUES ("SQLPlus", "De Pago", 47, "2018-05-15 08:03:00", 998, "Llamadas", 20, "2018-04-10 09:55:31", "2018-04-10 09:55:31");
+

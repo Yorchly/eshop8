@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20180508102306) do
   end
 
   create_table "carts", force: :cascade do |t|
-    t.date "created_at" 
-    t.date "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "developers", force: :cascade do |t|
