@@ -7,6 +7,8 @@
     <% for supplier in program.suppliers %>
       <dd><%= supplier.last_name %>, <%= supplier.first_name %></dd>
     <% end %>
-    <dd><%= sprintf("Tipo: %s. Precio: %.2f €. Número de serie: %s", program.kind, program.price, program.serial_number) %> </dd>
+    <dd><%= sprintf("Tipo: %s.", program.kind) %> </dd>
+    <dd><%= sprintf("Precio: %.2f €", program.price) %> </dd>
+    <dd><%= sprintf("Número de serie: %s", program.serial_number) %> </dd>
   <% end %>
 </dl>

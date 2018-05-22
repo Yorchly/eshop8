@@ -1,33 +1,36 @@
 <% if @orders == [] %>
-  <h2><%= "There are no orders with '#{@status}' status." %></h2>
+  <h2><%= "No existen órdenes con estado '#{@status}'." %></h2>
 <% else %>
   <table>
     <tr>
       <th>ID</th>
-      <th>Status</th>
-      <th>Total amount</th>
-      <th>Size</th>
-      <th>Created at</th>
-      <th>Updated at</th>
+      <th>Estado</th>
+      <th>Cantidad total</th>
+      <th>Tamaño</th>
+      <th>Creado el</th>
+      <th>Actualizado el</th>
       <th></th>
     </tr>
   <% for order in @orders %>
-
-    <tr>
+    <tr>    
+      <% @estado = 'abierto' if order.status == 'open' %>
+      <% @estado = 'fallido' if order.status == 'failed' %>
+      <% @estado = 'procesado' if order.status == 'processed' %>
+      <% @estado = 'cerrado' if order.status == 'closed' %>
       <td align="center"><%= order.id %></td>
-      <td align="center"><%= order.status[0].capitalize + order.status[1..order.status.length-1] %></td>
+      <td align="center"><%= @estado.capitalize %></td>
       <td align="center"><%= order.total %></td>
       <td align="center"><%= order.amount %></td>
       <td align="center"><%= order.created_at.strftime("%d-%m-%Y %I:%M") %></td>
       <td align="center"><%= order.updated_at.strftime("%d-%m-%Y %I:%M") %></td>
-      <td><%= link_to 'Show', :action => 'show', :id => order %></td>
+      <td><%= link_to 'Mostrar', :action => 'show', :id => order %></td>
     </tr>
   <% end %>
   </table>
 
   <% if @orders.total_pages > 1 %>
     <br/>
-    <%= 'View page:' %>
+    <%= 'Ver página:' %>
   <% end %>
 
   <%= will_paginate @orders, :page_links => true, :link_separator => ' ', :container => false,

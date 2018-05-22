@@ -3,7 +3,7 @@ class CheckoutController < ApplicationController
 
   def index
     @order = Order.new
-    @page_title = 'Checkout'
+    @page_title = 'Validar pedido'
     if @cart.programs.empty?
       flash[:notice] = 'Tu carrito de compra está vacío! ' +
                        'Por favor inserte almenos un programa para hacer el procedimiento de pago.'
@@ -17,7 +17,7 @@ class CheckoutController < ApplicationController
     @order.ship_to_country_code = @order.ship_to_country_code.upcase
     @order.customer_ip = request.remote_ip
     @order.status = 'open'
-    @page_title = 'Checkout'
+    @page_title = 'Validar pedido'
     populate_order
 
     if @order.save

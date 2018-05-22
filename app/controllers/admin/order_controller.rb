@@ -15,11 +15,16 @@ class Admin::OrderController < Admin::AuthenticatedController
     @status = params[:id]
     if @status.blank?
       @status = 'all'
+      @estado = '(todos)'
       conditions = nil
     else
       conditions = "status = '#{@status}'"
+      @estado = 'abiertos' if @status == 'open'
+      @estado = 'procesados' if @status == 'processed'
+      @estado = 'cerrados' if @status == 'closed'
+      @estado = 'fallidos' if @status == 'failed'
     end
     @orders = Order.where(conditions).paginate(:page => params[:page], :per_page => 10)
-    @page_title = "Listando los pedidos #{@status}"
+    @page_title = "Listando los pedidos #{@estado}"
   end
 end
