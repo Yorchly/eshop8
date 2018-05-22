@@ -1,6 +1,22 @@
 Rails.application.routes.draw do
 
 
+  get 'user_session/new'
+
+  get 'user_session/create'
+
+  get 'user_session/destroy'
+
+  get 'user/new'
+
+  get 'user/create'
+
+  get 'user/edit'
+
+  get 'user/update'
+
+  get 'user/show'
+
   root :to => 'catalog#index'
 
   get 'about' => 'about#index'
@@ -37,6 +53,18 @@ Rails.application.routes.draw do
   get 'admin/program/show'
   get 'admin/program/show/:id' => 'admin/program#show'
   get 'admin/program/index'
+
+  get 'user_session/new'
+  get 'user_session/create' # for showing failed login screen after restarting web server
+  post 'user_session/create'
+  get 'user_session/destroy'
+
+  get 'user/new'
+  post 'user/create'
+  get 'user/show'
+  get 'user/show/:id' => 'user#show'
+  get 'user/edit'
+  post 'user/update'
 
   post 'admin/order/close'
   post 'admin/order/destroy'

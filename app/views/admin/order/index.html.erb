@@ -12,11 +12,12 @@
       <th></th>
     </tr>
   <% for order in @orders %>
+
     <tr>
       <td align="center"><%= order.id %></td>
       <td align="center"><%= order.status[0].capitalize + order.status[1..order.status.length-1] %></td>
       <td align="center"><%= order.total %></td>
-      <td align="center"><%= order.programs.size %></td>
+      <td align="center"><%= order.amount %></td>
       <td align="center"><%= order.created_at.strftime("%d-%m-%Y %I:%M") %></td>
       <td align="center"><%= order.updated_at.strftime("%d-%m-%Y %I:%M") %></td>
       <td><%= link_to 'Show', :action => 'show', :id => order %></td>

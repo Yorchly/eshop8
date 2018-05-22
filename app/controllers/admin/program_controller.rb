@@ -1,4 +1,4 @@
-class Admin::ProgramController < ApplicationController
+class Admin::ProgramController < Admin::AuthenticatedController
   def new
     load_data
     @program = Program.new

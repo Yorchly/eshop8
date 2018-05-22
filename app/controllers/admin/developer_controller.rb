@@ -1,4 +1,4 @@
-class Admin::DeveloperController < ApplicationController
+class Admin::DeveloperController < Admin::AuthenticatedController
  def new
     @developer = Developer.new
     @page_title = 'Crear nuevo desarrollador'

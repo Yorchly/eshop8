@@ -29,6 +29,8 @@ gem 'RedCloth', '4.2.9'
 
 gem 'paperclip', '4.3.2'
 
+gem 'authlogic', '3.4.6'
+
 gem 'countries', '0.9.3', :require => 'iso3166'
 
 gem 'country_select', '1.3.1'

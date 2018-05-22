@@ -37,6 +37,15 @@ class Order < ActiveRecord::Base
     sum
   end
 
+  def amount
+    sum = 0
+    order_items.each do |item|
+      sum += item.amount
+    end
+    sum
+  end
+
+
   def process
     begin
       raise 'Un pedido cerrado no puede volver a ser procesado' if self.closed?
