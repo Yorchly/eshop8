@@ -23,9 +23,7 @@ class CartControllerTest < ActionController::TestCase
   test "clear" do
     post :add, :id => 4
 
-    post :add, :id => 5
-
-    assert_equal [Program.find(4)], [Program.find(5)], Cart.find(@request.session[:cart_id]).programs
+    assert_equal [Program.find(4)], Cart.find(@request.session[:cart_id]).programs
     post :clear
     assert_response :redirect
     assert_redirected_to :controller => 'catalog'
