@@ -6,7 +6,7 @@ class CheckoutController < ApplicationController
     @page_title = 'Validar pedido'
     if @cart.programs.empty?
       flash[:notice] = 'Tu carrito de compra está vacío! ' +
-                       'Por favor inserte almenos un programa para hacer el procedimiento de pago.'
+                       'Por favor inserta al menos un programa para hacer el procedimiento de pago.'
       redirect_to :controller => 'catalog'
     end
   end

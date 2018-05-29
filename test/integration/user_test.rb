@@ -12,8 +12,8 @@ class UserTest < ActionDispatch::IntegrationTest
                                                :password_confirmation => 'admin' })
     george.shows_user_account user_account
     george.edits_user_account(user_account, :user => { :name => 'Admin', :login => 'admin',
-                                            :email => 'admin@hotmail.com', :password => 'admin',
-                                            :password_confirmation => 'admin' })
+                                            :email => 'admin@hotmail.com', :password => 'gold',
+                                            :password_confirmation => 'gold' })
   end
 
   private
