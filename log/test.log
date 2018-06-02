@@ -22763,6 +22763,7 @@ ApplicationController::current_user_session
   [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
 Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 2.0ms)
   [1m[35m (3.5ms)[0m  ROLLBACK
+<<<<<<< HEAD
   [1m[36mActiveRecord::SchemaMigration Load (18.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
   [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
   [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
@@ -25480,3 +25481,5 @@ ApplicationController::current_user
 ApplicationController::current_user
 Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 1.0ms)
   [1m[36m (5.1ms)[0m  [1mROLLBACK[0m
+=======
+>>>>>>> 9ae6be5054fe5480a106f671ea28bbce8cf2a628
